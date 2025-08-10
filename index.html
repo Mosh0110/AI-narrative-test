@@ -224,11 +224,8 @@
             box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
             transform: translateY(-2px);
         }
-        .btn-primary::before {
-            content: '👀';
-            margin-right: 8px;
-            font-size: 1.1em;
-        }
+    /* Emoji now injected via JS into button text to avoid duplication */
+    .btn-primary.wrong { background: linear-gradient(135deg,#dc2626,#b91c1c); }
         
         /* Secondary action button (Next Question) */
         .btn-secondary { 
@@ -357,10 +354,7 @@
             cursor: not-allowed;
             transform: none;
         }
-        
-        .btn-primary:disabled::before {
-            content: '✅';
-        }
+    /* Removed :disabled::before pseudo-element to prevent duplicate emoji when JS injects one */
         
         @media (max-width: 768px) {
             body { padding: 10px; }
@@ -375,7 +369,43 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <!-- Landing / Intro Page -->
+    <div id="landing" class="container" style="text-align:center; padding:60px 40px;">
+        <h1 style="margin-top:0; font-size:3rem; line-height:1.05;">How well do you understand AI reasoning step?</h1>
+        <p style="font-size:1.3rem; max-width:760px; margin:28px auto 12px; color:#334155; font-weight:500;">
+            Our research suggests people struggle to understand how reasoning step in AI outputs influance future steps.
+        </p>
+        <p style="font-size:1.9rem; margin:42px 0 55px; font-weight:600; color:#1e293b; letter-spacing:-0.5px;">
+            How well can <span style="font-size:2.05rem; font-weight:750;">you</span> do?
+        </p>
+        <div style="display:flex; flex-direction:column; align-items:center; gap:34px; max-width:520px; margin:0 auto;">
+            <button onclick="startNarrativeTest()" style="background:linear-gradient(135deg,#4f46e5,#6366f1); color:#fff; border:none; padding:24px 38px; font-size:1.3rem; font-weight:600; border-radius:16px; cursor:pointer; width:100%; box-shadow:0 10px 26px rgba(79,70,229,0.3); transition:all .25s; letter-spacing:.5px;">
+                Take the AI Narrative Test
+            </button>
+            <div class="research-links" style="margin:0;">
+                <a href="[RESEARCH_PAPER_LINK]" class="research-link" target="_blank">📄 Read the Research Paper</a>
+                <a href="https://github.com/Mosh0110/AI-narrative-test" class="research-link" target="_blank">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                    </svg>
+                    View Code on GitHub
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function startNarrativeTest(){
+            const landing = document.getElementById('landing');
+            const test = document.getElementById('test-container');
+            if(landing) landing.style.display='none';
+            if(test) test.style.display='block';
+            window.scrollTo({top:0, behavior:'smooth'});
+        }
+    </script>
+
+    <!-- Main Test Container (hidden until start) -->
+    <div class="container" id="test-container" style="display:none;">
         <h1>🧠 AI Narrative Test</h1>
         
         <div class="challenge-intro">
@@ -401,7 +431,7 @@
             <p style="margin-bottom: 10px;"><strong>The test:</strong> Each reasoning step appears in its own box. Clickable choices are marked with letters (A, B, C, D) - select the one that's most crucial to the target step. The goal is to see how well your narrative understanding matches the AI's actual process.</p>
         </div>
         
-        <div class="progress" id="progress">
+    <div class="progress" id="progress">
             Question <span id="current-question">1</span> of <span id="current-chunk-size">5</span>
             <span id="checkpoint-countdown" style="margin-left: 15px; color: #64748b; font-size: 0.9em;"></span>
         </div>
@@ -467,11 +497,11 @@ Wait, let me make sure I understand the percentage increase correctly.</p>
 </div></div>
         <div class="step-container">
             <div class="instruction-area">
-                If the crucial step (one of the options above) was omitted, the AI would reason differently:
+                If the crucial step (one of the options above) was omitted, the AI would will write instead:
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Then he spent $50,000 on repairs....</p>
                 </div>
             </div>
@@ -583,11 +613,11 @@ Wait, let me make sure I understand the percentage increase correctly.</p>
 </div></div>
         <div class="step-container">
             <div class="instruction-area">
-                If the crucial step (one of the options above) was omitted, the AI would reason differently:
+                If the crucial step (one of the options above) was omitted, the AI would will write instead:
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Wait, 150% of the original value...</p>
                 </div>
             </div>
@@ -658,7 +688,7 @@ First, let's understand the components here.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning Step</strong><br>
                     <p style="font-style: normal;"> So first, maybe I should find out...</p>
                 </div>
             </div>
@@ -791,7 +821,7 @@ Let me write that out.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Hmm, 18...</p>
                 </div>
             </div>
@@ -885,7 +915,7 @@ So, altogether, the flock needs 60 cups of feed each day.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Wait, 3 times 20 is 60. Yeah, that's right. So, 60 cups total...</p>
                 </div>
             </div>
@@ -984,7 +1014,7 @@ So, altogether, the flock needs 60 cups of feed each day.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Let's add those two amounts together to see how much has already been fed:
 
 Total fed so far = 15 cups + 25 cups = ...</p>
@@ -1115,7 +1145,7 @@ Now, if he buys 16 glasses, how many pairs is that?</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Therefore, the total cost should be...</p>
                 </div>
             </div>
@@ -1249,7 +1279,7 @@ Now, if he buys 16 glasses, how many pairs is that?</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> 16 divided by 2...</p>
                 </div>
             </div>
@@ -1325,7 +1355,7 @@ First, let me note down the information given.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Then, Charleston has...</p>
                 </div>
             </div>
@@ -1427,7 +1457,7 @@ Seattle: 20 sheep.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Charleston's sheep = 4 * Seattle's...</p>
                 </div>
             </div>
@@ -1538,7 +1568,7 @@ First, let me break down the problem into parts.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Maybe it's only the remaining part? Let me...</p>
                 </div>
             </div>
@@ -1636,7 +1666,7 @@ Now, the problem says he tries to get home in 4 hours, but there are some issues
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> So the next part is about his...</p>
                 </div>
             </div>
@@ -1716,7 +1746,7 @@ First, let me figure out how many regular hours and how many overtime hours she 
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;">
 
 Now, calculating...</p>
@@ -1849,7 +1879,7 @@ Let me write that out.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;">
 
 Let me calculate 30% of...</p>
@@ -1948,7 +1978,7 @@ Next, she bought 2 dozen mini cupcakes at $80 per dozen.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;">
 
 Next, she bought 2 dozen mini cupcakes...</p>
@@ -2039,7 +2069,7 @@ Wait, but the initial cost is $90. So, he needs to make up that $90 through thes
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Wait, but that's only after the first year? Or is that starting from the first year?
 
 Wait, the problem says "each year it...</p>
@@ -2106,7 +2136,7 @@ First, let me assign a variable to the number of vacuum cleaners she started wit
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> So, she sold a third of her vacuum cleaners at the green house. Then she sold...</p>
                 </div>
             </div>
@@ -2181,7 +2211,7 @@ First, total students are 20.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> Let me confirm that. The problem says "In...</p>
                 </div>
             </div>
@@ -2258,7 +2288,7 @@ Let me write that down step by step.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;">
 
 So for the jewelry: the initial investment is $...</p>
@@ -2346,7 +2376,7 @@ First, both trains start from the same point, San Rafael.</p>
             </div>
             <div class="step-box">
                 <div class="counterfactual-text-info">
-                    <strong style="font-style: normal;">Alternative Reasoning Path</strong><br>
+                    <strong style="font-style: normal;">Alternative Reasoning step</strong><br>
                     <p style="font-style: normal;"> The question is about the total distance each train has traveled...</p>
                 </div>
             </div>
@@ -2411,29 +2441,14 @@ First, both trains start from the same point, San Rafael.</p>
         // Function to update progress display
         function updateProgressDisplay() {
             // Show overall progress through all questions
-            document.getElementById('current-question').textContent = currentQuestionIndex + 1;
-            document.getElementById('current-chunk-size').textContent = totalQuestions;
+            // Progress within current 5-question part
+            const withinPartIndex = (currentQuestionIndex % questionsPerChunk) + 1;
+            document.getElementById('current-question').textContent = withinPartIndex;
+            document.getElementById('current-chunk-size').textContent = questionsPerChunk;
             
-            // Calculate questions until next checkpoint
-            const questionsAnsweredSoFar = questionsAnswered;
-            const questionsUntilNextCheckpoint = questionsPerChunk - (questionsAnsweredSoFar % questionsPerChunk);
-            
-            // Update checkpoint countdown
+            // Display current test segment label instead of checkpoint countdown
             const countdownElement = document.getElementById('checkpoint-countdown');
-            if (questionsUntilNextCheckpoint === questionsPerChunk) {
-                // Just completed a checkpoint or haven't started
-                if (questionsAnsweredSoFar > 0 && questionsAnsweredSoFar < totalQuestions) {
-                    countdownElement.textContent = `• checkpoint in ${questionsPerChunk} questions`;
-                } else if (questionsAnsweredSoFar === 0) {
-                    countdownElement.textContent = `• checkpoint in ${questionsPerChunk} questions`;
-                } else {
-                    countdownElement.textContent = '';
-                }
-            } else if (questionsAnsweredSoFar >= totalQuestions) {
-                countdownElement.textContent = '';
-            } else {
-                countdownElement.textContent = `• checkpoint in ${questionsUntilNextCheckpoint} questions`;
-            }
+            countdownElement.textContent = `AI Narrative Test #${currentChunk}`;
         }
         
         // Function to show question by index (no shuffling)
@@ -2448,6 +2463,23 @@ First, both trains start from the same point, San Rafael.</p>
             if (targetContainer) {
                 targetContainer.style.display = 'block';
                 updateProgressDisplay();
+                
+                // Update Next button label if last question
+                const nextBtn = targetContainer.querySelector('.btn-secondary');
+                if (nextBtn) {
+                    if (questionIndex === totalQuestions - 1) {
+                        nextBtn.textContent = 'Finish';
+                    } else {
+                        nextBtn.textContent = 'Next Question';
+                    }
+                }
+                // Re-enable Show Correct Answer button if moving forward (safety)
+                const showBtn = targetContainer.querySelector('.btn-primary');
+                if (showBtn) {
+                    showBtn.disabled = false;
+                    showBtn.style.opacity = '1';
+                    showBtn.style.cursor = 'pointer';
+                }
                 
                 // Start timing for this question
                 currentQuestionStartTime = Date.now();
@@ -2561,12 +2593,16 @@ First, both trains start from the same point, San Rafael.</p>
                     resultDiv.style.background = 'linear-gradient(135deg, #dcfce7, #bbf7d0)';
                     resultDiv.style.borderColor = '#16a34a';
                     resultDiv.style.color = '#15803d';
+                    showAnsBtn.classList.remove('wrong');
+                    showAnsBtn.innerHTML = '✅ Show Correct Answer';
                 } else {
                     resultDiv.textContent = `❌ Not quite right. The correct answer is: ${correctAnswers.join(', ')}.`;
                     resultDiv.className = 'result';
                     resultDiv.style.background = 'linear-gradient(135deg, #fef2f2, #fecaca)';
                     resultDiv.style.borderColor = '#dc2626';
                     resultDiv.style.color = '#dc2626';
+                    showAnsBtn.classList.add('wrong');
+                    showAnsBtn.innerHTML = '❌ Show Correct Answer';
                 }
             }
             
@@ -2582,11 +2618,12 @@ First, both trains start from the same point, San Rafael.</p>
         // Function to show score popup
         function showScorePopup() {
             const accuracy = ((correctAnswersCount / questionsAnswered) * 100).toFixed(1);
+            const accuracyInt = Math.round((correctAnswersCount / questionsAnswered) * 100);
             const currentChunkNumber = Math.floor((questionsAnswered - 1) / questionsPerChunk) + 1;
             const isLastChunk = (currentQuestionIndex >= totalQuestions - 1);
             
             // Prepare share text for Twitter/X
-            const shareText = encodeURIComponent(`I just scored ${accuracy}% on the AI Narrative Test! Testing the accuracy of your percieved narrative of AI process. Test yourself here: [YOUR_WEBSITE_URL] `);
+            const shareText = encodeURIComponent(`I tried the AI Narrative Test and scored ${accuracyInt}% (${questionsAnswered} questions).\nSee how well your narrative of the model’s reasoning matches its actual process: \nhttps://mosh0110.github.io/AI-narrative-test/`);
             const shareUrl = `https://twitter.com/intent/tweet?text=${shareText}`;
             
             const modal = document.createElement('div');
@@ -2615,7 +2652,7 @@ First, both trains start from the same point, San Rafael.</p>
             
             // Determine if user has more questions or if this is the end
             const hasMoreQuestions = !isLastChunk;
-            const buttonText = hasMoreQuestions ? 'Continue Challenge' : 'See Final Results';
+            const buttonText = hasMoreQuestions ? 'Take Another Test' : '';
             const exitButtonHtml = hasMoreQuestions ? `
                 <button onclick="exitChallenge()" style="
                     background: linear-gradient(135deg, #64748b, #475569);
@@ -2632,7 +2669,7 @@ First, both trains start from the same point, San Rafael.</p>
             ` : '';
             
             modalContent.innerHTML = `
-                <h2 style="color: #4f46e5; margin-top: 0;">📊 Checkpoint ${currentChunkNumber} Complete!</h2>
+                <h2 style="color: #4f46e5; margin-top: 0;">🧪 AI Narrative Test #${currentChunkNumber} Complete!</h2>
                 <div style="background: linear-gradient(135deg, #f0f9ff, #e0f2fe); padding: 20px; border-radius: 8px; margin: 15px 0;">
                     <p style="font-size: 1.2em; margin: 0;"><strong>Questions Completed:</strong> ${questionsAnswered}</p>
                     <p style="font-size: 1.4em; margin: 10px 0; color: #059669;"><strong>Accuracy: ${accuracy}%</strong></p>
@@ -2665,8 +2702,8 @@ First, both trains start from the same point, San Rafael.</p>
                     </a>
                 </div>
                 
-                <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
-                    <button onclick="closeScorePopup()" style="
+                ${hasMoreQuestions ? `<div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+                    <button onclick=\"closeScorePopup()\" style=\"
                         background: linear-gradient(135deg, #4f46e5, #7c3aed);
                         color: white;
                         border: none;
@@ -2674,10 +2711,9 @@ First, both trains start from the same point, San Rafael.</p>
                         border-radius: 8px;
                         cursor: pointer;
                         font-size: 1em;
-                        font-weight: 600;
-                    ">${buttonText}</button>
+                        font-weight: 600;\">${buttonText}</button>
                     ${exitButtonHtml}
-                </div>
+                </div>` : ''}
             `;
             
             modal.appendChild(modalContent);
@@ -2733,15 +2769,111 @@ First, both trains start from the same point, San Rafael.</p>
                     window.scrollTo(0, 400);
                 }
             } else {
-                // End of test - show completion message
-                showCompletionMessage();
+                // Final question: ensure we count unanswered (if user never clicked Show Correct Answer)
+                if (!(currentQuestionNum in userAnswers)) {
+                    questionsAnswered++;
+                }
+                showFinalSummaryPopup();
             }
+        }
+
+        // Robust explicit finish function (independent of currentQuestionIndex checks)
+        function finishTest() {
+            // Explicit finalization path via dedicated button
+            if (currentQuestionIndex !== totalQuestions - 1) return;
+            if (!(totalQuestions in userAnswers) && questionsAnswered < totalQuestions) {
+                questionsAnswered++;
+            }
+            showFinalSummaryPopup();
+        }
+
+        // Inject a dedicated Finish button on the last question
+        function injectFinishButton() {
+            if (!totalQuestions) return;
+            const lastContainer = document.getElementById('question-container-' + totalQuestions);
+            if (!lastContainer) return;
+            const controls = lastContainer.querySelector('.controls');
+            if (!controls) return;
+            // Hide original next button if present
+            const originalNext = document.getElementById('next-btn-' + totalQuestions);
+            if (originalNext) originalNext.style.display = 'none';
+            if (!document.getElementById('finish-btn')) {
+                const finishBtn = document.createElement('button');
+                finishBtn.id = 'finish-btn';
+                finishBtn.className = 'btn-secondary';
+                finishBtn.textContent = 'Finish & See Summary';
+                finishBtn.style.background = 'linear-gradient(135deg, #7c3aed, #4f46e5)';
+                finishBtn.style.opacity = '1';
+                finishBtn.onclick = function() { finishTest(); };
+                controls.appendChild(finishBtn);
+            }
+        }
+
+        // Professional final popup before full page replacement
+        function showFinalSummaryPopup() {
+            const answered = questionsAnswered === 0 ? 0 : questionsAnswered;
+            const ratio = answered === 0 ? 0 : (correctAnswersCount / answered);
+            const accuracyPct = (ratio * 100).toFixed(1);
+            const accuracyInt = Math.round(ratio * 100);
+            const shareText = encodeURIComponent(`I tried the AI Narrative Test and scored ${accuracyInt}% (${questionsAnswered} questions).\nSee how well your narrative of the model’s reasoning matches its actual process: \nhttps://mosh0110.github.io/AI-narrative-test/`);
+            const shareUrl = `https://twitter.com/intent/tweet?text=${shareText}`;
+
+            const overlay = document.createElement('div');
+            overlay.style.cssText = `
+                position: fixed;
+                top: 0; left: 0; width: 100%; height: 100%;
+                background: rgba(0,0,0,0.5);
+                display: flex; justify-content: center; align-items: center;
+                z-index: 1500; backdrop-filter: blur(2px);
+            `;
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                background: white; padding: 32px 30px; border-radius: 14px;
+                max-width: 460px; width: 95%; text-align: center;
+                box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+                position: relative; font-family: inherit;
+            `;
+            modal.innerHTML = `
+                <div style="position:absolute;top:10px;right:12px;font-size:20px;color:#94a3b8;cursor:pointer;" id="final-popup-close">×</div>
+                <h2 style="color:#4f46e5;margin:0 0 16px;font-size:1.9em;">🎯 Test Complete!</h2>
+                <div style="background:linear-gradient(135deg,#f0f9ff,#e0f2fe);padding:18px 18px;border-radius:10px;margin:10px 0 18px;border:1px solid #bae6fd;">
+                    <p style="margin:0;font-size:1.05em;color:#0369a1;"><strong>Questions Completed:</strong> ${answered}</p>
+                    <p style="margin:8px 0 0;font-size:1.35em;color:#059669;font-weight:600;">Accuracy: ${accuracyPct}%</p>
+                    <p style="margin:6px 0 0;color:#475569;">Correct: ${correctAnswersCount} / ${answered}</p>
+                </div>
+                <div style="background:linear-gradient(135deg,#fef3c7,#fed7aa);padding:14px 16px;border-radius:10px;margin:12px 0 20px;border-left:4px solid #f59e0b;">
+                    <p style="margin:0;color:#92400e;font-weight:500;font-size:0.92em;">Share your score and invite others to compare narratives.</p>
+                </div>
+                <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px;">
+                    <a href="${shareUrl}" target="_blank" style="
+                        background:linear-gradient(135deg,#1d9bf0,#1a8cd8);color:#fff;border:none;
+                        padding:12px 22px;border-radius:8px;text-decoration:none;font-size:0.95em;
+                        font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:.2s;">
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        Share on X
+                    </a>
+                    <button id="final-close-btn" style="
+                        background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;
+                        padding:12px 22px;border-radius:8px;font-size:0.95em;font-weight:600;cursor:pointer;">
+                        Close
+                    </button>
+                </div>
+            `;
+            overlay.appendChild(modal);
+            document.body.appendChild(overlay);
+            const closeAndFinish = () => { document.body.removeChild(overlay); showCompletionMessage(); };
+            document.getElementById('final-popup-close').onclick = closeAndFinish;
+            document.getElementById('final-close-btn').onclick = closeAndFinish;
         }
         
         // Function to show completion message
         function showCompletionMessage() {
-            const finalAccuracy = ((correctAnswersCount / questionsAnswered) * 100).toFixed(1);
-            const shareText = encodeURIComponent(`I just completed the AI Narrative Test and scored ${finalAccuracy}%! 🧠🎯 Think you can understand AI decision-making better? Try it: [YOUR_WEBSITE_URL] #AIChallenge #ReasoningTest #AInarrative`);
+            // Safeguard: if user skipped revealing some answers, questionsAnswered may be < totalQuestions
+            const answered = questionsAnswered === 0 ? 0 : questionsAnswered;
+            const ratio = answered === 0 ? 0 : (correctAnswersCount / answered);
+            const finalAccuracy = (ratio * 100).toFixed(1);
+            const finalAccuracyInt = Math.round(ratio * 100);
+            const shareText = encodeURIComponent(`Finished the AI Narrative Test: ${finalAccuracyInt}% (${answered} questions). Test how accurately you identify causally crucial reasoning steps: https://mosh0110.github.io/AI-narrative-test/`);
             const shareUrl = `https://twitter.com/intent/tweet?text=${shareText}`;
             
             const exitMessage = userHasExited ? 
@@ -2808,6 +2940,25 @@ First, both trains start from the same point, San Rafael.</p>
         // Initialize the test when page loads
         document.addEventListener('DOMContentLoaded', function() {
             initializeQuestionOrder();
+            // Normalize alternative step instruction text
+            document.querySelectorAll('.instruction-area').forEach(el => {
+                const txt = el.textContent.trim();
+                if (txt === 'If the crucial step (one of the options above) was omitted, the AI would reason differently:') {
+                    el.textContent = 'If the crucial step (one of the options above) was omitted, the AI will write instead:';
+                }
+            });
+            // Fallback: ensure final next/finish button triggers completion
+            const finalBtn = document.getElementById('next-btn-' + document.querySelectorAll('.question-container').length);
+            if (finalBtn) {
+                finalBtn.addEventListener('click', function(e) {
+                    if (currentQuestionIndex === totalQuestions - 1) {
+                        e.preventDefault();
+                        nextQuestion(totalQuestions); // triggers completion logic
+                    }
+                });
+            }
+            // Add dedicated finish button
+            injectFinishButton();
         });
     </script>
 </body>
