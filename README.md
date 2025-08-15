@@ -2,8 +2,7 @@
 
 **Authors:** Mosh Levy, Zohar Elyoseph, Yoav Goldberg
 
-**TL;DR:** Reasoning texts can read coherently yet mislead readers about the model’s actual causal process.
-
-- PDF: [https://www.ai-narrative-test.com/paper/paper.pdf](https://do-you-understand-ai.com/paper/paper.pdf)
-- Demo: https://www.ai-narrative-test.com/
+- PDF: https://do-you-understand-ai.com/paper/paper.pdf
+- Demo: https://do-you-understand-ai.com
+- Code & data: Coming soon.
 - arXiv: **submitted; link pending moderation**
