@@ -10,10 +10,28 @@
     <meta name="citation_author" content="Zohar Elyoseph">
     <meta name="citation_author" content="Yoav Goldberg">
     <!-- TODO: add citation_public_url when public link is available -->
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWVCSDFQ9V"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HWVCSDFQ9V');
+        </script>
     <style>
         /* ===== Palette (subtle refinement: balanced, softer saturation) ===== */
         :root {
             --bg-page-start:#f9fafb;
+    /* Footer paper info (slightly more visible yet subtle) */
+    .paper-footer {max-width:1000px;margin:0 auto 40px; padding:0 20px; font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:0.8rem; line-height:1.45; color:#64748b;}
+    /* Balanced paper title & authors (less emphasis than previous version) */
+    .paper-footer-title {font-weight:600; font-size:0.9rem; color:#1e293b; letter-spacing:.15px; display:block; padding-left:8px; border-left:3px solid #cbd5e1; background:none; box-shadow:none; border-radius:0;}
+    .paper-footer-authors {margin-top:2px; font-size:0.9rem; font-weight:500; color:#475569; padding-left:8px;}
+    @media (min-width:768px){
+        .paper-footer-title {font-size:0.92rem;}
+        .paper-footer-authors {font-size:0.92rem;}
+    }
             --bg-page-end:#eef2f6;
             --bg-panel:#ffffff;
             --border-soft:#e2e8f0;
@@ -234,16 +252,21 @@
         }
         .controls { 
             display: flex; 
-            justify-content: space-between;
+            flex-direction: column; /* stack children so only one button area shows cleanly */
+            justify-content: center;
             align-items: center;
             margin-top: 30px;
             padding-top: 20px;
             border-top: 2px solid #e2e8f0;
+            min-height: 110px; /* reserve vertical space so layout doesn't jump when swapping buttons */
         }
         .controls .left-buttons { 
             display: flex; 
-            gap: 15px;
+            justify-content: center;
+            width: 100%;
         }
+        .controls button { margin: 0; }
+        .controls .btn-secondary { margin-top: 0; }
         
         /* Primary action button (Show Correct Answer) */
         .btn-primary { 
@@ -390,6 +413,8 @@
         }
         
     .btn-primary:disabled {background: linear-gradient(135deg,#94a3b8,#64748b); opacity:.6; cursor:not-allowed; transform:none; box-shadow:none;}
+    /* Utility class to fully hide next button until eligible */
+    .deferred { display:none !important; }
     /* Removed :disabled::before pseudo-element to prevent duplicate emoji when JS injects one */
         
         @media (max-width: 768px) {
@@ -410,7 +435,10 @@
 <body>
     <!-- Landing / Intro Page -->
     <div id="landing" class="container" style="text-align:center; padding:60px 40px;">
-        <h1 style="margin-top:0; font-size:3rem; line-height:1.05;">How well do you understand AI reasoning text?</h1>
+        <h1 style="margin-top:0; font-size:3rem; line-height:1.05;">
+            How well do you understand <br>
+            AI reasoning text?
+        </h1>
         <p style="font-size:1.3rem; max-width:760px; margin:28px auto 12px; color:#334155; font-weight:500;">
             Our research suggests people struggle to understand the dependencies in the reasoning of AI.
         </p>
@@ -434,7 +462,7 @@
     </div>
 
     <script>
-        const PAPER_URL = '#'; // TODO: replace with actual paper URL.
+        const PAPER_URL = 'https://do-you-understand-ai.com/paper/paper.pdf'; // TODO: replace with actual paper URL.
         function setPaperLinks(){
             document.querySelectorAll('[data-paper-link]').forEach(a=>{a.href=PAPER_URL;});
         }
@@ -453,7 +481,7 @@
         <h1>🧠 AI Narrative Test</h1>
         
         <div class="challenge-intro">
-            <h2>Can You Understand AI reasoning text?</h2>
+            <h2>Can you understand AI reasoning text correctly?</h2>
             <p>Test how well your understanding of the AI's reasoning matches its actual process.</p>
         </div>
         
@@ -559,7 +587,7 @@ Wait, let me make sure I understand the percentage increase correctly.</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(1, ['A'])" id="show-ans-btn-1" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(1)" id="next-btn-1" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(1)" id="next-btn-1" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -675,7 +703,7 @@ Wait, let me make sure I understand the percentage increase correctly.</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(2, ['B'])" id="show-ans-btn-2" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(2)" id="next-btn-2" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(2)" id="next-btn-2" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -746,7 +774,7 @@ First, let's understand the components here.</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(3, ['D'])" id="show-ans-btn-3" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(3)" id="next-btn-3" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(3)" id="next-btn-3" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -879,7 +907,7 @@ Let me write that out.</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(4, ['A'])" id="show-ans-btn-4" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(4)" id="next-btn-4" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(4)" id="next-btn-4" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -973,7 +1001,7 @@ So, altogether, the flock needs 60 cups of feed each day.</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(5, ['D'])" id="show-ans-btn-5" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(5)" id="next-btn-5" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(5)" id="next-btn-5" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -1074,7 +1102,7 @@ Total fed so far = 15 cups + 25 cups = ...</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(6, ['C'])" id="show-ans-btn-6" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(6)" id="next-btn-6" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(6)" id="next-btn-6" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -1203,7 +1231,7 @@ Now, if he buys 16 glasses, how many pairs is that?</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(7, ['A'])" id="show-ans-btn-7" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(7)" id="next-btn-7" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(7)" id="next-btn-7" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -1337,7 +1365,7 @@ Now, if he buys 16 glasses, how many pairs is that?</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(8, ['D'])" id="show-ans-btn-8" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(8)" id="next-btn-8" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(8)" id="next-btn-8" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -1413,7 +1441,7 @@ First, let me note down the information given.</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(9, ['B'])" id="show-ans-btn-9" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(9)" id="next-btn-9" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(9)" id="next-btn-9" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -1515,7 +1543,7 @@ Seattle: 20 sheep.</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(10, ['A'])" id="show-ans-btn-10" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(10)" id="next-btn-10" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(10)" id="next-btn-10" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -1626,7 +1654,7 @@ First, let me break down the problem into parts.</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(11, ['B'])" id="show-ans-btn-11" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(11)" id="next-btn-11" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(11)" id="next-btn-11" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -1724,7 +1752,7 @@ Now, the problem says he tries to get home in 4 hours, but there are some issues
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(12, ['C'])" id="show-ans-btn-12" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(12)" id="next-btn-12" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(12)" id="next-btn-12" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -1806,7 +1834,7 @@ Now, calculating...</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(13, ['C'])" id="show-ans-btn-13" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(13)" id="next-btn-13" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(13)" id="next-btn-13" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -1939,7 +1967,7 @@ Let me calculate 30% of...</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(14, ['C'])" id="show-ans-btn-14" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(14)" id="next-btn-14" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(14)" id="next-btn-14" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -2038,7 +2066,7 @@ Next, she bought 2 dozen mini cupcakes...</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(15, ['D'])" id="show-ans-btn-15" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(15)" id="next-btn-15" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(15)" id="next-btn-15" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -2129,7 +2157,7 @@ Wait, the problem says "each year it...</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(16, ['A'])" id="show-ans-btn-16" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(16)" id="next-btn-16" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(16)" id="next-btn-16" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -2194,7 +2222,7 @@ First, let me assign a variable to the number of vacuum cleaners she started wit
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(17, ['B'])" id="show-ans-btn-17" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(17)" id="next-btn-17" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(17)" id="next-btn-17" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -2269,7 +2297,7 @@ First, total students are 20.</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(18, ['B'])" id="show-ans-btn-18" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(18)" id="next-btn-18" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(18)" id="next-btn-18" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -2348,7 +2376,7 @@ So for the jewelry: the initial investment is $...</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(19, ['D'])" id="show-ans-btn-19" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(19)" id="next-btn-19" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(19)" id="next-btn-19" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -2434,7 +2462,7 @@ First, both trains start from the same point, San Rafael.</p>
                 <div class="left-buttons">
                     <button onclick="showCorrectAnswer(20, ['C'])" id="show-ans-btn-20" class="btn-primary">Show Correct Answer</button>
                 </div>
-                <button onclick="nextQuestion(20)" id="next-btn-20" class="btn-secondary">Next Question</button>
+                <button onclick="nextQuestion(20)" id="next-btn-20" class="btn-secondary deferred">Next Question</button>
             </div>
         </div>
 
@@ -2516,16 +2544,18 @@ First, both trains start from the same point, San Rafael.</p>
                     } else {
                         nextBtn.textContent = 'Next Question';
                     }
-                    // Lock next button until Show Correct Answer used
-                    nextBtn.classList.add('locked');
+                    // Ensure hidden & locked until Show Correct Answer is used
+                    nextBtn.classList.add('locked','deferred');
                     nextBtn.setAttribute('aria-disabled','true');
                 }
                 // Re-enable Show Correct Answer button if moving forward (safety)
                 const showBtn = targetContainer.querySelector('.btn-primary');
                 if (showBtn) {
                     showBtn.disabled = false;
+                    showBtn.classList.remove('deferred');
                     showBtn.style.opacity = '1';
                     showBtn.style.cursor = 'pointer';
+                    showBtn.style.display = 'inline-block';
                 }
                 
                 // Start timing for this question
@@ -2657,11 +2687,13 @@ First, both trains start from the same point, San Rafael.</p>
             
             // Visual feedback: enhance next button after answer is shown
             nextBtn.classList.add('answer-shown');
-            nextBtn.classList.remove('locked');
+            nextBtn.classList.remove('locked','deferred');
             nextBtn.removeAttribute('aria-disabled');
-            showAnsBtn.style.opacity = '0.6';
+            // Hide Show Correct Answer button entirely after use
+            showAnsBtn.style.opacity = '0';
             showAnsBtn.style.cursor = 'default';
             showAnsBtn.disabled = true;
+            showAnsBtn.style.display = 'none';
         }
         
         // Function to show score popup
@@ -2672,7 +2704,7 @@ First, both trains start from the same point, San Rafael.</p>
             const isLastChunk = (currentQuestionIndex >= totalQuestions - 1);
             
             // Prepare share text for Twitter/X
-            const shareText = encodeURIComponent(`I tried the AI Narrative Test and scored ${accuracyInt}% (${questionsAnswered} questions).\nSee how well your narrative of the model’s reasoning matches its actual process: \nhttps://mosh0110.github.io/AI-narrative-test/`);
+            const shareText = encodeURIComponent(`I tried the AI Narrative Test and scored ${accuracyInt}% (${questionsAnswered} questions).\nSee how well your narrative of the model’s reasoning matches its actual process: \ndo-you-understand-ai.com`);
             const shareUrl = `https://twitter.com/intent/tweet?text=${shareText}`;
             
             const modal = document.createElement('div');
@@ -2701,7 +2733,7 @@ First, both trains start from the same point, San Rafael.</p>
             
             // Determine if user has more questions or if this is the end
             const hasMoreQuestions = !isLastChunk;
-            const buttonText = hasMoreQuestions ? 'Continue the Test' : '';
+            const buttonText = hasMoreQuestions ? '5 more questions' : '';
             const exitButtonHtml = hasMoreQuestions ? `
                 <button onclick="exitChallenge()" style="
                     background: linear-gradient(135deg, #64748b, #475569);
@@ -2879,7 +2911,7 @@ First, both trains start from the same point, San Rafael.</p>
             const ratio = answered === 0 ? 0 : (correctAnswersCount / answered);
             const accuracyPct = (ratio * 100).toFixed(1);
             const accuracyInt = Math.round(ratio * 100);
-            const shareText = encodeURIComponent(`I tried the AI Narrative Test and scored ${accuracyInt}% (${questionsAnswered} questions).\nSee how well your narrative of the model’s reasoning matches its actual process: \nhttps://mosh0110.github.io/AI-narrative-test/`);
+            const shareText = encodeURIComponent(`I tried the AI Narrative Test and scored ${accuracyInt}% (${questionsAnswered} questions).\nSee how well your narrative of the model’s reasoning matches its actual process: \ndo-you-understand-ai.com`);
             const shareUrl = `https://twitter.com/intent/tweet?text=${shareText}`;
 
             const overlay = document.createElement('div');
@@ -2937,7 +2969,7 @@ First, both trains start from the same point, San Rafael.</p>
             const ratio = answered === 0 ? 0 : (correctAnswersCount / answered);
             const finalAccuracy = (ratio * 100).toFixed(1);
             const finalAccuracyInt = Math.round(ratio * 100);
-            const shareText = encodeURIComponent(`Finished the AI Narrative Test: ${finalAccuracyInt}% (${answered} questions). Test how accurately you identify causally crucial reasoning steps: https://mosh0110.github.io/AI-narrative-test/`);
+            const shareText = encodeURIComponent(`Finished the AI Narrative Test: ${finalAccuracyInt}% (${answered} questions). Test how accurately you identify causally crucial reasoning steps: do-you-understand-ai.com`);
             const shareUrl = `https://twitter.com/intent/tweet?text=${shareText}`;
             
             const exitMessage = userHasExited ? 
@@ -3029,12 +3061,11 @@ First, both trains start from the same point, San Rafael.</p>
         });
     </script>
 </body>
-<footer style="max-width:1000px;margin:0 auto 40px; padding:0 20px; font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:0.78rem; line-height:1.4; color:#64748b;">
+<footer class="paper-footer">
     <hr style="border:none; border-top:1px solid #e2e8f0; margin:50px 0 18px;" />
-    <div style="display:flex; flex-direction:column; gap:4px; align-items:flex-start;">
-        <div style="font-weight:600; color:#334155;">Humans Perceive Wrong Narratives from AI Reasoning Texts</div>
-        <div>Mosh Levy · Zohar Elyoseph · Yoav Goldberg</div>
-        
+    <div style="display:flex; flex-direction:column; gap:2px; align-items:flex-start;">
+    <div class="paper-footer-title"><a href="https://do-you-understand-ai.com/paper/paper.pdf" target="_blank" style="text-decoration:none; color:inherit;" title="Open paper">Humans Perceive Wrong Narratives from AI Reasoning Texts</a></div>
+        <div class="paper-footer-authors">Mosh Levy · Zohar Elyoseph · Yoav Goldberg</div>
     </div>
 </footer>
 </html>
