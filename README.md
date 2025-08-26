@@ -2,7 +2,7 @@
 
 **Authors:** Mosh Levy, Zohar Elyoseph, Yoav Goldberg
 
-- PDF: https://do-you-understand-ai.com/paper/paper.pdf
+- arXiv: https://arxiv.org/abs/2508.16599
 - Demo: https://do-you-understand-ai.com
 - Code & data: Coming soon.
-- arXiv: **submitted; link pending moderation**
+<!-- Previous link states retained for history -->
