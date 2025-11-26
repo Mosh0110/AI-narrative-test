@@ -1,0 +1,1804 @@
+[
+    {
+        "question_number": 1,
+        "target_step_index": 9,
+        "target_step_text": " Then after repairs, the value increased by 150%.",
+        "counterfactual_starting_text": " Then he spent $50,000 on repairs.",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " He buys it for $80,000 and then spends $50,000 on repairs.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 3,
+                "text": " The problem says that the repairs increased the value of the house by 150%.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": " Hmm, profit is usually the selling price minus the total cost, right?",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": " So first, I need to find out what the selling price is after the repairs, and then subtract his total costs to find the profit.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 0,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 2,
+        "target_step_index": 16,
+        "target_step_text": " Wait, 100% increase is doubling.",
+        "counterfactual_starting_text": " Wait, 150% of the original value",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " He buys it for $80,000 and then spends $50,000 on repairs.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " The problem says that the repairs increased the value of the house by 150%.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 6,
+                "text": " So first, I need to find out what the selling price is after the repairs, and then subtract his total costs to find the profit.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 13,
+                "text": " So, for example, a 100% increase would double the value.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 0,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 3,
+        "target_step_index": 16,
+        "target_step_text": "\n\nSo if the value increased by 150%, that means the new value is the original value plus 150% of the original value.",
+        "counterfactual_starting_text": "\n\nBut let me check. If he bought the house for $80,000, and then put in $50,000 in repairs, the",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " Josh is flipping a house.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " He buys it for $80,000 and then spends $50,000 on repairs.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 11,
+                "text": " So the original value here would be the price he bought it for, which is $80,000.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 14,
+                "text": " Hmm, the wording says \"increased the value of the house by 150%.\"",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 0,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 4,
+        "target_step_index": 7,
+        "target_step_text": " Each sprint is 60 meters.",
+        "counterfactual_starting_text": " So first, maybe I should find out",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": " <think>\nOkay, let's see. James is doing sprints, right?",
+                "is_crucial": false
+            },
+            {
+                "step_index": 2,
+                "text": " The problem says he runs 3 sprints 3 times a week, and each sprint is 60 meters.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " I need to figure out the total meters he runs in a week.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": "\n\nFirst, let's understand the components here.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 1,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 5,
+        "target_step_index": 19,
+        "target_step_text": " Let me calculate that.",
+        "counterfactual_starting_text": " Hmm, 18",
+        "choices": [
+            {
+                "step_index": 4,
+                "text": " Hmm, let me break this down step by step.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 5,
+                "text": "\n\nFirst, let's understand the components here.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 11,
+                "text": " For one session: 3 sprints * 60 meters per sprint.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 14,
+                "text": " 3 times 60 is 180.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 1,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 6,
+        "target_step_index": 13,
+        "target_step_text": " So, she's already given 40 cups in the first two meals.",
+        "counterfactual_starting_text": " Then subtract that from 60. 60 minus 40 is",
+        "choices": [
+            {
+                "step_index": 7,
+                "text": " Let me do that: 20 times 3 is 60.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 9,
+                "text": "\n\nNow, she already gives them some feed in the morning and afternoon.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 10,
+                "text": " The morning meal is 15 cups, and the afternoon is 25 cups.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 11,
+                "text": " To find out how much is left for the final meal, I need to add the morning and afternoon amounts and subtract that from the total daily requirement.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 2,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 7,
+        "target_step_index": 11,
+        "target_step_text": " Now, Wendi has already given them 15 cups in the morning and 25 cups in the afternoon.",
+        "counterfactual_starting_text": " Wait, 3 times 20 is 60. Yeah, that's right. So, 60 cups total",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " Wendi has 20 chickens, and each chicken gets three cups of feed every day.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " She already gave them 15 cups in the morning and 25 cups in the afternoon.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 8,
+                "text": " Let me write that down:",
+                "is_crucial": false
+            },
+            {
+                "step_index": 9,
+                "text": "\n\nTotal daily feed = 3 cups/chicken \u00d7 20 chickens = 60 cups.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 2,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 8,
+        "target_step_index": 12,
+        "target_step_text": " To find out how much is left for the final meal, I need to subtract the amount she's already fed them from the total daily requirement.",
+        "counterfactual_starting_text": " Let's add those two amounts together to see how much has already been fed:\n\nTotal fed so far = 15 cups + 25 cups = ",
+        "choices": [
+            {
+                "step_index": 4,
+                "text": " She already gave them 15 cups in the morning and 25 cups in the afternoon.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": " So, we need to figure out how much she needs to give them in the final meal to make sure each chicken gets their total three cups for the day.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": "\n\nFirst, maybe I should calculate the total amount of feed all the chickens need in a day.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 9,
+                "text": "\n\nTotal daily feed = 3 cups/chicken \u00d7 20 chickens = 60 cups.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 2,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 9,
+        "target_step_index": 14,
+        "target_step_text": " 0.6 times 5 is 3, so each pair would cost 5 + 3 = $8.",
+        "counterfactual_starting_text": " \n\nSo, for 16 glasses, how many of them are full price and how many are discounted? Since every second",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": " <think>\nOkay, let's see.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 10,
+                "text": " So if you buy two glasses, you pay full price for the first and 60% of $5 for the second.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 11,
+                "text": " Then, if you buy four, it would be full, discount, full, discount, and so on.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 12,
+                "text": "\n\nSo, if that's the case, then for every pair of glasses, the cost would be $5 + (0.6 * $5).",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 3,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 10,
+        "target_step_index": 18,
+        "target_step_text": " Wait, is that right?",
+        "counterfactual_starting_text": " Therefore, the total cost should be",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "Okay, let's see.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 3,
+                "text": " Each glass is normally $5, but every second glass is 60% of the price.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " Hmm, so that means every other glass is cheaper.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 11,
+                "text": " So, 60% of $5 is 0.6 * 5 = $3.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 3,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 11,
+        "target_step_index": 19,
+        "target_step_text": " Let me check again.",
+        "counterfactual_starting_text": " 16 divided by 2",
+        "choices": [
+            {
+                "step_index": 6,
+                "text": "\n\nFirst, without any discounts, 16 glasses would cost 16 times $5.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " That's straightforward: 16 * 5 = $80.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 10,
+                "text": "\n\nThe problem says every second glass costs 60% of the price.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 17,
+                "text": " So, 8 pairs at $8 each would be 8 * 8 = $64.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 3,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 12,
+        "target_step_index": 8,
+        "target_step_text": " That's straightforward.",
+        "counterfactual_starting_text": " Then, Charleston has",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": " <think>\nOkay, let's see.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " And Charleston has four times as many sheep as Seattle.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 5,
+                "text": " Hmm, okay, let me break this down step by step.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": "\n\nFirst, let me note down the information given.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 4,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 13,
+        "target_step_index": 10,
+        "target_step_text": " So if Seattle is 20, then Charleston would be 4 multiplied by 20.",
+        "counterfactual_starting_text": " So if I can figure out how many sheep Charleston has, then I can find out Toulouse's",
+        "choices": [
+            {
+                "step_index": 3,
+                "text": " And Charleston has four times as many sheep as Seattle.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": "\n\nFirst, let me note down the information given.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " Seattle has 20 sheep.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 8,
+                "text": " That's straightforward.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 4,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 14,
+        "target_step_index": 13,
+        "target_step_text": " Got that part.",
+        "counterfactual_starting_text": " Now, Toulouse",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": " <think>\nOkay, let's see.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 2,
+                "text": " The problem says that Toulouse has twice as many sheep as Charleston.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " And Charleston has four times as many sheep as Seattle.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " We need to find out how many sheep all three cities have together, given that Seattle has 20 sheep.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 4,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 15,
+        "target_step_index": 13,
+        "target_step_text": "\n\nSeattle: 20 sheep.",
+        "counterfactual_starting_text": " Charleston's sheep = 4 * Seattle's",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "Okay, let's see.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 4,
+                "text": " And we know Seattle has 20 sheep.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": " We need to find the total number of sheep all three have together.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": " Hmm, let me break this down step by step.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 4,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 16,
+        "target_step_index": 19,
+        "target_step_text": " Got that part.",
+        "counterfactual_starting_text": "\n\nNow, Toulouse has",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " The problem says that Toulouse has twice as many sheep as Charleston.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " Charleston has four times as many sheep as Seattle.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 7,
+                "text": "\n\nFirst, let's start with what we know.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 8,
+                "text": " Seattle has 20 sheep.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 4,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 17,
+        "target_step_index": 8,
+        "target_step_text": " But wait, when it says she has to restart the download from the beginning, does that mean she loses all the progress she made before?",
+        "counterfactual_starting_text": " Let me break it down step by step.\n\nFirst, let's figure out how much data Carla downloads before the restart. The problem says ",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "<think>\nOkay, let me try to figure out how long it takes Carla to download this 200 GB file.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " But then, 40% of the way through, her computer restarts because of Windows updates, which takes 20 minutes, and then she has to restart the download from the beginning.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " Hmm, so I need to calculate the total time taken considering this interruption.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": "\n\nFirst, let me break down the problem into parts.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 5,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 18,
+        "target_step_index": 15,
+        "target_step_text": " Maybe I need to check the problem statement again.",
+        "counterfactual_starting_text": " Maybe it's only the remaining part? Let me",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "<think>\nOkay, let me try to figure out how long it takes Carla to download this 200 GB file.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 2,
+                "text": " So, the problem says she normally downloads at 2 GB per minute.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 8,
+                "text": " But wait, when it says she has to restart the download from the beginning, does that mean she loses all the progress she made before?",
+                "is_crucial": false
+            },
+            {
+                "step_index": 13,
+                "text": " Wait, the wording says \"restart the download from the beginning,\" which implies that she starts over from 0, so she has to download the entire 200 GB again.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 5,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 19,
+        "target_step_index": 12,
+        "target_step_text": " Let me parse that part again.",
+        "counterfactual_starting_text": " So the next part is about his",
+        "choices": [
+            {
+                "step_index": 3,
+                "text": " Then he turns around and tries to get home in 4 hours, but there's some traffic issues.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": " If he drove for 3 hours at 60 mph, the distance he covered is speed multiplied by time.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 9,
+                "text": " So he's 180 miles away from home when he realizes he forgot something.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 10,
+                "text": " Then he turns around and starts heading back.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 6,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 20,
+        "target_step_index": 15,
+        "target_step_text": " Then he spends the next half-hour driving at 30 mph.",
+        "counterfactual_starting_text": " That means he's still 180 miles away from home after",
+        "choices": [
+            {
+                "step_index": 6,
+                "text": " If he drove for 3 hours at 60 mph, the distance he covered is speed multiplied by time.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " So that's 3 hours * 60 mph.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 12,
+                "text": " Let me parse that part again.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 13,
+                "text": " He spends the first 2 hours in standstill traffic.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 6,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 21,
+        "target_step_index": 7,
+        "target_step_text": " So, 60 mph \u00d7 3 hours = 180 miles.",
+        "counterfactual_starting_text": " But since he turns around, I need to consider his position relative to home",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " Hmm, first, he drives for 3 hours at 60 mph.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " Then he turns around and tries to get back home in 4 hours, but there's traffic and different speeds.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " Let me break this down step by step.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": "\n\nFirst part: John drives away from home at 60 mph for 3 hours.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 6,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 22,
+        "target_step_index": 9,
+        "target_step_text": "\n\nNow, he turns around and starts heading back home.",
+        "counterfactual_starting_text": " That's 60 mph \u00d7 3 hours = 180 miles",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "Okay, let's try to figure out how far John is from home after all his driving.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 2,
+                "text": " Hmm, first, he drives for 3 hours at 60 mph.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " Then he turns around and tries to get back home in 4 hours, but there's traffic and different speeds.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " So, 60 mph \u00d7 3 hours = 180 miles.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 6,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 23,
+        "target_step_index": 12,
+        "target_step_text": "\n\nFirst, he spends 2 hours in standstill traffic.",
+        "counterfactual_starting_text": "\n\nHe turns around and starts heading back home. The total time he",
+        "choices": [
+            {
+                "step_index": 4,
+                "text": " Let me break this down step by step.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " So, 60 mph \u00d7 3 hours = 180 miles.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 8,
+                "text": " So, he's 180 miles away from home when he realizes he forgot something.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 9,
+                "text": "\n\nNow, he turns around and starts heading back home.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 6,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 24,
+        "target_step_index": 7,
+        "target_step_text": " Let me write that down.",
+        "counterfactual_starting_text": " Then, for the remaining ",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": " <think>\nOkay, let's see. Eliza earns $10 per hour for the first 40 hours each week.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 2,
+                "text": " If she works more than that, she gets overtime pay, which is 1.2 times her regular rate.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " I need to figure out how much she earned.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": "\n\nFirst, I should calculate her regular pay for the first 40 hours.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 7,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 25,
+        "target_step_index": 9,
+        "target_step_text": " Got that.",
+        "counterfactual_starting_text": "\n\nNow, calculating",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " Eliza worked 45 hours this week.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " Her regular pay is $10 per hour for the first 40 hours.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": " So, I need to calculate her total earnings for the week, including both regular and overtime pay.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 7,
+                "text": " She worked a total of 45 hours.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 7,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 26,
+        "target_step_index": 16,
+        "target_step_text": " Her overtime rate is 1.2 times her regular hourly rate.",
+        "counterfactual_starting_text": " She worked 45 hours total, so the overtime hours are 45 -",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " Eliza worked 45 hours this week.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": "\n\nFirst, let me figure out how many regular hours and how many overtime hours she worked.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " She worked a total of 45 hours.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 8,
+                "text": " The first 40 hours are regular, so that leaves 45 - 40 = 5 hours of overtime.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 7,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 27,
+        "target_step_index": 7,
+        "target_step_text": " Got that.",
+        "counterfactual_starting_text": " Then the second",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": " <think>\nOkay, let's see. So there's this program that had 60 downloads in the first month.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 2,
+                "text": " Then in the second month, it was three times as many as the first month.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " But then in the third month, it reduced by 30%.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": " Hmm, let me break this down step by step.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 8,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 28,
+        "target_step_index": 13,
+        "target_step_text": " Okay, that seems easy enough.",
+        "counterfactual_starting_text": " Then the third month is a ",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": " <think>\nOkay, let's see. So there's this program that had 60 downloads in the first month.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": "\n\nFirst, the first month is straightforward: 60 downloads.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 7,
+                "text": " Got that.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 8,
+                "text": " Now, the second month is three times as many as the first month.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 8,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 29,
+        "target_step_index": 17,
+        "target_step_text": " Is it from the second month's number?",
+        "counterfactual_starting_text": " The problem says \"but then reduced by ",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": " <think>\nOkay, let's see. So there's this program that had 60 downloads in the first month.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 9,
+                "text": " So three times 60.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 10,
+                "text": " Let me calculate that.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 14,
+                "text": "\n\nNow, the third month is where it gets a bit tricky.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 8,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 30,
+        "target_step_index": 13,
+        "target_step_text": " Got that.",
+        "counterfactual_starting_text": "\n\nNow, the",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " The problem is about a program's downloads over three months.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " Let me break it down step by step.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 5,
+                "text": "\n\nFirst, the first month had 60 downloads.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 10,
+                "text": " Let me calculate that.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 8,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 31,
+        "target_step_index": 18,
+        "target_step_text": "\n\nLet me write that out.",
+        "counterfactual_starting_text": "\n\nLet me calculate 30% of",
+        "choices": [
+            {
+                "step_index": 5,
+                "text": "\n\nFirst, the first month had 60 downloads.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " So month one: 60 downloads.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 10,
+                "text": " Let me calculate that.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 11,
+                "text": " 3 multiplied by 60 is 180.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 8,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 32,
+        "target_step_index": 8,
+        "target_step_text": "\n\nNext, she bought 2 dozen mini cupcakes at $80 per dozen.",
+        "counterfactual_starting_text": " Wait, no, that's not right. Wait, 3 times 68",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " Let me break it down step by step.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " Hmm, so for the donuts, I should multiply the number of dozens by the cost per dozen.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": " That would be 3 times 68.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 6,
+                "text": " Let me calculate that.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 9,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 33,
+        "target_step_index": 14,
+        "target_step_text": " Hmm, let me think.",
+        "counterfactual_starting_text": " Hmm, 6 times ",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": " <think>\nOkay, let's see. Toula bought different pastries, and I need to figure out the total cost.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " Hmm, so for the donuts, I should multiply the number of dozens by the cost per dozen.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 8,
+                "text": "\n\nNext, she bought 2 dozen mini cupcakes at $80 per dozen.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 9,
+                "text": " So that's 2 times 80.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 9,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 34,
+        "target_step_index": 9,
+        "target_step_text": " So, the donuts cost $204 in total.",
+        "counterfactual_starting_text": " Wait, no, that's not right. Wait, ",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "Okay, let's see.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": " So, for the donuts, I should multiply the number of dozens by the cost per dozen.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": " That would be 3 times 68.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 7,
+                "text": " Let me calculate that.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 9,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 35,
+        "target_step_index": 12,
+        "target_step_text": " So that's 2 times 80.",
+        "counterfactual_starting_text": "\n\nNext, she bought 2 dozen mini cupcakes",
+        "choices": [
+            {
+                "step_index": 3,
+                "text": " Hmm, let me break this down step by step.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " Let me calculate that.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 8,
+                "text": " 3 times 60 is 180, and 3 times 8 is 24, so adding those together, 180 + 24 = $204.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 10,
+                "text": "\n\nNext, she bought 2 dozen mini cupcakes at $80 per dozen.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 9,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 36,
+        "target_step_index": 15,
+        "target_step_text": "\n\nThen, there are 6 dozen mini cheesecakes, each dozen costing $55.",
+        "counterfactual_starting_text": " Let me check that again: 2 times 80 is indeed 160. Yep, that",
+        "choices": [
+            {
+                "step_index": 5,
+                "text": " So, for the donuts, I should multiply the number of dozens by the cost per dozen.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " Let me calculate that.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 12,
+                "text": " So that's 2 times 80.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 13,
+                "text": " 2 times 80 is straightforward\u2014it's $160.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 9,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 37,
+        "target_step_index": 9,
+        "target_step_text": "\n\nWait, but the initial cost is $90. So, he needs to make up that $90 through these annual profits. ",
+        "counterfactual_starting_text": " Wait, but that's only after the first year? Or is that starting from the first year?\n\nWait, the problem says \"each year it",
+        "choices": [
+            {
+                "step_index": 3,
+                "text": "\n\nFirst, let me break down the numbers. ",
+                "is_crucial": true
+            },
+            {
+                "step_index": 4,
+                "text": "\n\nThe initial cost is a one-time expense of $90. Then, each year, there are two things happening: he's gaining money from selling lemons and losing money from the cost of watering and feeding. ",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": " Each year, he gets 7 lemons. Each lemon is sold for $1.50, so 7 times 1.5. Let me compute that. ",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " 7 * 1.5 is... 10.5 dollars per year from selling lemons. ",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 10,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 38,
+        "target_step_index": 12,
+        "target_step_text": " So, the total cost is $90 plus $3 per year. ",
+        "counterfactual_starting_text": " So, the total amount he needs to cover is the $90. ",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "<think>\nOkay, let's see. Carlos wants to plant a lemon tree. The initial cost is $90. Then, every year, the tree grows 7 lemons. He can sell each lemon for $1.50. But he also has to spend $3 each year on water and feed for the tree. The question is asking how many years it will take before he starts earning money on the lemon tree. ",
+                "is_crucial": false
+            },
+            {
+                "step_index": 2,
+                "text": "\n\nSo, I need to figure out when his total earnings from the lemons will exceed the total costs, which include the initial planting cost plus the annual maintenance costs. ",
+                "is_crucial": true
+            },
+            {
+                "step_index": 3,
+                "text": "\n\nFirst, let me break down the numbers. ",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": "\n\nLet me calculate the net profit per year. ",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 10,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 39,
+        "target_step_index": 6,
+        "target_step_text": "\n\nFirst, let me assign a variable to the number of vacuum cleaners she started with.",
+        "counterfactual_starting_text": " So, she sold a third of her vacuum cleaners at the green house. Then she sold",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "Okay, let's see. Melanie is a door-to-door saleswoman who sells vacuum cleaners.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 2,
+                "text": " The problem says she sold a third of her vacuum cleaners at the green house, then 2 more to the red house, and then half of what was left at the orange house.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 3,
+                "text": " Now she has 5 left.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " We need to figure out how many she started with.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 11,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 40,
+        "target_step_index": 9,
+        "target_step_text": "\n\nShe sold a third of them at the green house.",
+        "counterfactual_starting_text": " Now, let's break down the problem step by step.\n\n",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "Okay, let's see. Melanie is a door-to-door saleswoman who sells vacuum cleaners.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 2,
+                "text": " The problem says she sold a third of her vacuum cleaners at the green house, then 2 more to the red house, and then half of what was left at the orange house.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": " Hmm, let me break this down step by step.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 7,
+                "text": " Let's call that number \"V\".",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 11,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 41,
+        "target_step_index": 11,
+        "target_step_text": " That means after the green house, she has V - (1/3)V left.",
+        "counterfactual_starting_text": " Then, she sold 2 more to the red house. So, after the green and",
+        "choices": [
+            {
+                "step_index": 3,
+                "text": " Now she has 5 left.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": "\n\nFirst, let me assign a variable to the number of vacuum cleaners she started with.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 7,
+                "text": " Let's call that number \"V\".",
+                "is_crucial": false
+            },
+            {
+                "step_index": 8,
+                "text": " So, V is the total number she had initially.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 11,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 42,
+        "target_step_index": 18,
+        "target_step_text": " Got that part.",
+        "counterfactual_starting_text": " Then, she sold",
+        "choices": [
+            {
+                "step_index": 6,
+                "text": "\n\nFirst, let me assign a variable to the number of vacuum cleaners she started with.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 11,
+                "text": " That means after the green house, she has V - (1/3)V left.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 13,
+                "text": " V minus a third of V is (2/3)V.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 14,
+                "text": " So, two-thirds of her original stock remains after the green house.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 11,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 43,
+        "target_step_index": 17,
+        "target_step_text": "\n\nNext, she sells 2 more to the red house.",
+        "counterfactual_starting_text": " Because 1 - 1/3 is 2/3.",
+        "choices": [
+            {
+                "step_index": 10,
+                "text": "\n\nFirst, she sells a third of her vacuum cleaners at the green house.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 12,
+                "text": " So, the number of vacuum cleaners she has after leaving the green house would be the original amount minus a third.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 14,
+                "text": " Let me compute that.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 15,
+                "text": " That's (2/3)x.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 11,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 44,
+        "target_step_index": 18,
+        "target_step_text": " So total students are 20.",
+        "counterfactual_starting_text": " The rest would be the remaining students after",
+        "choices": [
+            {
+                "step_index": 9,
+                "text": "\n\nNow, the next part says 25% of the remaining enrolled in jazz dance.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 10,
+                "text": " The remaining students after contemporary dance would be the total students minus those in contemporary.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 12,
+                "text": " Then 25% of those 16 are in jazz.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 15,
+                "text": " Hmm, 0.25 is a quarter, so a quarter of 16 is 4.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 12,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 45,
+        "target_step_index": 8,
+        "target_step_text": " 20% of them are in contemporary.",
+        "counterfactual_starting_text": " Let me confirm that. The problem says \"In",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "Okay, let's see.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 2,
+                "text": " There's a dance class with 20 students.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 4,
+                "text": " Then, 25% of the remaining students enrolled in jazz dance, and the rest are in hip-hop.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": " I need to find what percentage of the entire class is in hip-hop.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            1
+        ],
+        "sample_idx": 12,
+        "achieved_html_pos": 1,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 46,
+        "target_step_index": 16,
+        "target_step_text": " Let me calculate 25% of 16.",
+        "counterfactual_starting_text": " Wait, remaining after contemporary? Yes, because first ",
+        "choices": [
+            {
+                "step_index": 5,
+                "text": " I need to find what percentage of the entire class is in hip-hop.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 10,
+                "text": " Well, 20% of 20 is calculated as 0.20 * 20.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 11,
+                "text": " Let me do that math.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 14,
+                "text": " That leaves 20 - 4 = 16 students remaining.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 12,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 47,
+        "target_step_index": 18,
+        "target_step_text": " So, 16 divided by 4 is 4.",
+        "counterfactual_starting_text": " So, 25% of 16 is 0.25",
+        "choices": [
+            {
+                "step_index": 7,
+                "text": "\n\nFirst, total students are 20.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 12,
+                "text": " 0.20 times 20 is 4.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 14,
+                "text": " That leaves 20 - 4 = 16 students remaining.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 16,
+                "text": " Let me calculate 25% of 16.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 12,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 48,
+        "target_step_index": 8,
+        "target_step_text": "\n\nLet me write that down step by step.",
+        "counterfactual_starting_text": "\n\nSo for the jewelry: the initial investment is $",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "Okay, let's see. The merchant has two options: buy jewelry worth $5,000 or electronic gadgets worth $8,000.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 2,
+                "text": " The financial advisor says the jewelry market will go up by 2.5% and the electronic gadgets market will rise by 1.2% in the same month.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 5,
+                "text": " If something goes up by a certain percentage, the profit is the original amount multiplied by that percentage.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": " So, for the jewelry, the profit would be $5,000 times 2.5%, and for the electronics, it's $8,000 times 1.2%.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 13,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 49,
+        "target_step_index": 16,
+        "target_step_text": " So, the profit from jewelry would be $125.",
+        "counterfactual_starting_text": " So, 5,000 is 100 times 50",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " The financial advisor says the jewelry market will go up by 2.5% and the electronic gadgets market will rise by 1.2% in the same month.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 9,
+                "text": "\n\nFor the jewelry:\nProfit = Principal \u00d7 Rate",
+                "is_crucial": false
+            },
+            {
+                "step_index": 12,
+                "text": " So,\n\n$5,000 \u00d7 0.025 = ?",
+                "is_crucial": false
+            },
+            {
+                "step_index": 14,
+                "text": " 5,000 times 0.025. Hmm, 5,000 times 0.01 is 50, so 0.025 is 2.5 times that.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 13,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 50,
+        "target_step_index": 10,
+        "target_step_text": " So, each day they are moving in different directions.",
+        "counterfactual_starting_text": " The question is about the total distance each train has traveled",
+        "choices": [
+            {
+                "step_index": 2,
+                "text": " So, there are two trains leaving San Rafael at the same time.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 3,
+                "text": " Both of them travel westward for 80 miles on the first day.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " Then, the next day, they both turn around and go northwards for 150 miles.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 8,
+                "text": " On day one, they go west for 80 miles.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            2
+        ],
+        "sample_idx": 14,
+        "achieved_html_pos": 2,
+        "model_name": "moshe0110/Qwen/Qwen3-32B-0921e0c1"
+    },
+    {
+        "question_number": 51,
+        "target_step_index": 9,
+        "target_step_text": " So, 80 miles plus 150 miles.",
+        "counterfactual_starting_text": "\n\nSo, distance is a scalar quantity, so it",
+        "choices": [
+            {
+                "step_index": 4,
+                "text": " The question is asking for the distance each train covered over those two days.",
+                "is_crucial": true
+            },
+            {
+                "step_index": 5,
+                "text": " Hmm, so first, I need to figure out the total distance each train traveled.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 6,
+                "text": "\n\nWait, the problem says both trains are traveling westward and then northward.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 7,
+                "text": " So, each train is moving in those directions.",
+                "is_crucial": false
+            }
+        ],
+        "answer_indices": [
+            0
+        ],
+        "sample_idx": 14,
+        "achieved_html_pos": 0,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 52,
+        "target_step_index": 14,
+        "target_step_text": "\n\nSo, each train goes west 80 miles on the first day.",
+        "counterfactual_starting_text": " The question specifically says \"distance covered,\" which usually refers to the total path traveled",
+        "choices": [
+            {
+                "step_index": 1,
+                "text": "Okay, let's see.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 2,
+                "text": " There are two trains leaving San Rafael, both going westward for 80 miles.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 4,
+                "text": " The question is asking for the distance each train covered over those two days.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 12,
+                "text": " But the question specifically says \"distance covered,\" which is a scalar quantity, so it's just the total path length, not the straight-line distance from the starting point.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 14,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    },
+    {
+        "question_number": 53,
+        "target_step_index": 18,
+        "target_step_text": " But wait, is there any trick here?",
+        "counterfactual_starting_text": " So, 80 plus 150 is 230",
+        "choices": [
+            {
+                "step_index": 3,
+                "text": " Then the next day, they head north for 150 miles.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 13,
+                "text": " So displacement would be the straight-line distance, but distance covered is the sum of each segment.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 14,
+                "text": "\n\nSo, each train goes west 80 miles on the first day.",
+                "is_crucial": false
+            },
+            {
+                "step_index": 16,
+                "text": " So, total distance for each train is 80 + 150.",
+                "is_crucial": true
+            }
+        ],
+        "answer_indices": [
+            3
+        ],
+        "sample_idx": 14,
+        "achieved_html_pos": 3,
+        "model_name": "moshe0110/deepseek-ai/DeepSeek-R1-d641e9ae"
+    }
+]

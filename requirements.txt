@@ -1,0 +1,17 @@
+
+datasets>=2.14.0
+transformers>=4.30.0
+pandas>=2.0.0
+numpy>=1.24.0
+
+
+together>=1.0.0
+requests>=2.31.0
+
+matplotlib>=3.7.0
+statsmodels
+tqdm>=4.65.0
+openpyxl
+torch
+scipy
+seaborn
