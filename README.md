@@ -4,5 +4,4 @@
 
 - arXiv: https://arxiv.org/abs/2508.16599
 - Demo: https://do-you-understand-ai.com
-- Code & data: Coming soon.
 <!-- Previous link states retained for history -->
