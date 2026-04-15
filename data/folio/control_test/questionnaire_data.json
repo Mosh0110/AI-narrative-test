@@ -1,0 +1,1326 @@
+{
+  "title": "Step Dependency Questionnaire",
+  "test_id": "generated_control_test_q14_r14_31q_attention3_balancedanswers",
+  "instructions": "You are presented with a problem and a step-by-step reasoning process. For each question, the reasoning is shown up to a target step (highlighted in yellow).\n\n<strong>Your task:</strong> From the four options provided, select the earlier step that directly supports the target step in the reasoning structure.\n\nOnly one of the four options is a direct parent of the target step. The other three are earlier steps, but they are not direct parents of the target step.",
+  "attention_check_indices": [
+    7,
+    15,
+    25
+  ],
+  "questions": [
+    {
+      "question_number": 1,
+      "sample_idx": 0,
+      "main_question": "Premises:\n\nPeople in this club who perform in school talent shows often attend and are very engaged with school events.\n\nPeople in this club either perform in school talent shows often or are inactive and disinterested community members.\n\nPeople in this club who chaperone high school dances are not students who attend the school.\n\nAll people in this club who are inactive and disinterested members of their community chaperone high school dances.\n\nAll young children and teenagers in this club who wish to further their academic careers and educational opportunities are students who attend the school.\n\nBonnie is in this club and she either both attends and is very engaged with school events and is a student who attends the school or is not someone who both attends and is very engaged with school events and is not a student who attends the school.\n\nConclusion:\nIf Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and disinterested member of the community.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 13,
+      "target_step_text": "Since Bonnie is in this club, if she performs often in school talent shows then she attends school events.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 2,
+          "text": "I also know that people in this club either perform often in school talent shows or are inactive and disinterested community members."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 3,
+          "text": "Bonnie is in this club, and either she both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 7,
+          "text": "Similarly, if Bonnie is in the club and performs often in school talent shows, then she is very engaged with school events."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 9,
+          "text": "If Bonnie is in the club and does not perform often in school talent shows, then she is disinterested."
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 380,
+      "example_id": 1015,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        3,
+        1
+      ],
+      "num_steps_shown": 13,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 2,
+      "sample_idx": 0,
+      "main_question": "Premises:\n\nPeople in this club who perform in school talent shows often attend and are very engaged with school events.\n\nPeople in this club either perform in school talent shows often or are inactive and disinterested community members.\n\nPeople in this club who chaperone high school dances are not students who attend the school.\n\nAll people in this club who are inactive and disinterested members of their community chaperone high school dances.\n\nAll young children and teenagers in this club who wish to further their academic careers and educational opportunities are students who attend the school.\n\nBonnie is in this club and she either both attends and is very engaged with school events and is a student who attends the school or is not someone who both attends and is very engaged with school events and is not a student who attends the school.\n\nConclusion:\nIf Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and disinterested member of the community.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 14,
+      "target_step_text": "Combining that with the earlier constraint: if Bonnie performs often in school talent shows, then either she is a student or she is not very engaged with school events.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 3,
+          "text": "Bonnie is in this club, and either she both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 6,
+          "text": "Since people in this club who perform often in school talent shows attend school events, if Bonnie is in the club and performs often, then she attends school events."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 8,
+          "text": "If Bonnie is in the club and does not perform often in school talent shows, then she is inactive."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 10,
+          "text": "If Bonnie is in the club and does not perform often in school talent shows, then she is a member of the community."
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 380,
+      "example_id": 1015,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        13,
+        3
+      ],
+      "num_steps_shown": 14,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 3,
+      "sample_idx": 0,
+      "main_question": "Premises:\n\nPeople in this club who perform in school talent shows often attend and are very engaged with school events.\n\nPeople in this club either perform in school talent shows often or are inactive and disinterested community members.\n\nPeople in this club who chaperone high school dances are not students who attend the school.\n\nAll people in this club who are inactive and disinterested members of their community chaperone high school dances.\n\nAll young children and teenagers in this club who wish to further their academic careers and educational opportunities are students who attend the school.\n\nBonnie is in this club and she either both attends and is very engaged with school events and is a student who attends the school or is not someone who both attends and is very engaged with school events and is not a student who attends the school.\n\nConclusion:\nIf Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and disinterested member of the community.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 15,
+      "target_step_text": "But if Bonnie performs often in school talent shows, she is very engaged with school events.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 3,
+          "text": "Bonnie is in this club, and either she both attends and is very engaged with school events and is a student who attends the school, or she neither attends and is very engaged with school events nor is a student who attends the school."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 7,
+          "text": "Similarly, if Bonnie is in the club and performs often in school talent shows, then she is very engaged with school events."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 9,
+          "text": "If Bonnie is in the club and does not perform often in school talent shows, then she is disinterested."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 11,
+          "text": "From Bonnie's biconditional condition, either Bonnie is a student, or she does not attend school events, or she is not very engaged with school events."
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 380,
+      "example_id": 1015,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        3,
+        1
+      ],
+      "num_steps_shown": 15,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 4,
+      "sample_idx": 0,
+      "main_question": "Premises:\n\nPeople in this club who perform in school talent shows often attend and are very engaged with school events.\n\nPeople in this club either perform in school talent shows often or are inactive and disinterested community members.\n\nPeople in this club who chaperone high school dances are not students who attend the school.\n\nAll people in this club who are inactive and disinterested members of their community chaperone high school dances.\n\nAll young children and teenagers in this club who wish to further their academic careers and educational opportunities are students who attend the school.\n\nBonnie is in this club and she either both attends and is very engaged with school events and is a student who attends the school or is not someone who both attends and is very engaged with school events and is not a student who attends the school.\n\nConclusion:\nIf Bonnie is either both a young child or teenager who wishes to further her academic career and educational opportunities and chaperones high school dances or neither is a young child nor teenager who wishes to further her academic career and educational opportunities, then Bonnie is either a student who attends the school or is an inactive and disinterested member of the community.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 18,
+      "target_step_text": "So if Bonnie performs often in school talent shows, she must be a student (since her very-engaged status forces that from the earlier constraint).",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 7,
+          "text": "Similarly, if Bonnie is in the club and performs often in school talent shows, then she is very engaged with school events."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 10,
+          "text": "If Bonnie is in the club and does not perform often in school talent shows, then she is a member of the community."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 12,
+          "text": "Likewise, either Bonnie attends the school, or she does not attend school events, or she is not very engaged with school events."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 14,
+          "text": "Combining that with the earlier constraint: if Bonnie performs often in school talent shows, then either she is a student or she is not very engaged with school events."
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 380,
+      "example_id": 1015,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        14,
+        15
+      ],
+      "num_steps_shown": 18,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 5,
+      "sample_idx": 3,
+      "main_question": "Premises:\n\nThere are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould’s wild turkey, Merriam’s wild turkey, Rio Grande wild turkey, and Ocellated wild turkey.\n\nTom is not an Eastern wild turkey.\n\nTom is not an Osceola wild turkey.\n\nTom is not a Gould's wild turkey.\n\nTom is neither a Merriam's wild turkey nor a Rio Grande wild turkey.\n\nTom is a wild turkey.\n\nConclusion:\nTom is an Ocellated wild turkey.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 13,
+      "target_step_text": "Tom is not a Merriam's wild turkey.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 2,
+          "text": "Tom is neither a Merriam's wild turkey nor a Rio Grande wild turkey."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 5,
+          "text": "So for any animal, if it is a wild turkey, then it must be an Eastern, Osceola, Gould's, Merriam's, Rio Grande, or Ocellated wild turkey."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 7,
+          "text": "Tom is not an Eastern wild turkey."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 9,
+          "text": "Tom is not an Osceola wild turkey."
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 0,
+      "example_id": 0,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        2
+      ],
+      "num_steps_shown": 13,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 6,
+      "sample_idx": 3,
+      "main_question": "Premises:\n\nThere are six types of wild turkeys: Eastern wild turkey, Osceola wild turkey, Gould’s wild turkey, Merriam’s wild turkey, Rio Grande wild turkey, and Ocellated wild turkey.\n\nTom is not an Eastern wild turkey.\n\nTom is not an Osceola wild turkey.\n\nTom is not a Gould's wild turkey.\n\nTom is neither a Merriam's wild turkey nor a Rio Grande wild turkey.\n\nTom is a wild turkey.\n\nConclusion:\nTom is an Ocellated wild turkey.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 14,
+      "target_step_text": "That eliminates the Merriam's option, so Tom must be either a Rio Grande or Ocellated wild turkey.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 3,
+          "text": "I want to show that Tom is an Ocellated wild turkey. Let me assume, for the sake of contradiction, that he is not."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 6,
+          "text": "Since Tom is a wild turkey, he must be one of these six types: Eastern, Osceola, Gould's, Merriam's, Rio Grande, or Ocellated."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 8,
+          "text": "That eliminates the Eastern option, so Tom must be an Osceola, Gould's, Merriam's, Rio Grande, or Ocellated wild turkey."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 12,
+          "text": "That eliminates the Gould's option, so Tom must be a Merriam's, Rio Grande, or Ocellated wild turkey."
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 0,
+      "example_id": 0,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        12,
+        2
+      ],
+      "num_steps_shown": 14,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 7,
+      "sample_idx": 4,
+      "main_question": "Premises:\n\nAll rabbits that can be spotted near the campus are cute.\n\nSome turtles can be spotted near the campus.\n\nThe only animals that can be spotted near the campus are rabbits and squirrels.\n\nIf something is skittish, then it is not calm.\n\nAll the squirrels that can be spotted near the campus are skittish.\n\nRockie can be spotted near the campus, and it is calm.\n\nConclusion:\nRockie is a turtle or cute.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 10,
+      "target_step_text": "Since skittish things are not calm, anything skittish cannot be calm.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that all rabbits that can be spotted near the campus are cute."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 2,
+          "text": "I also know that the only animals that can be spotted near the campus are rabbits and squirrels."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 3,
+          "text": "If something is skittish, then it is not calm."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 6,
+          "text": "I want to show that Rockie is a turtle or cute. Let me assume, for the sake of contradiction, that this is false."
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 471,
+      "example_id": 1363,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        3
+      ],
+      "num_steps_shown": 10,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 8,
+      "sample_idx": 4,
+      "main_question": "Premises:\n\nAll rabbits that can be spotted near the campus are cute.\n\nSome turtles can be spotted near the campus.\n\nThe only animals that can be spotted near the campus are rabbits and squirrels.\n\nIf something is skittish, then it is not calm.\n\nAll the squirrels that can be spotted near the campus are skittish.\n\nRockie can be spotted near the campus, and it is calm.\n\nConclusion:\nRockie is a turtle or cute.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 12,
+      "target_step_text": "Rockie is calm.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that all rabbits that can be spotted near the campus are cute."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 4,
+          "text": "All squirrels that can be spotted near the campus are skittish."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 5,
+          "text": "Rockie can be spotted near the campus, and Rockie is calm."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 8,
+          "text": "Since all rabbits spotted near the campus are cute, any rabbit spotted near the campus must be cute."
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 471,
+      "example_id": 1363,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        5
+      ],
+      "num_steps_shown": 12,
+      "is_attention_check": true
+    },
+    {
+      "question_number": 9,
+      "sample_idx": 4,
+      "main_question": "Premises:\n\nAll rabbits that can be spotted near the campus are cute.\n\nSome turtles can be spotted near the campus.\n\nThe only animals that can be spotted near the campus are rabbits and squirrels.\n\nIf something is skittish, then it is not calm.\n\nAll the squirrels that can be spotted near the campus are skittish.\n\nRockie can be spotted near the campus, and it is calm.\n\nConclusion:\nRockie is a turtle or cute.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 13,
+      "target_step_text": "Now, if something is spotted near the campus, then either it is a squirrel or it is cute (because if it were a rabbit near campus, it would be cute).",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 2,
+          "text": "I also know that the only animals that can be spotted near the campus are rabbits and squirrels."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 5,
+          "text": "Rockie can be spotted near the campus, and Rockie is calm."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 7,
+          "text": "Since only rabbits and squirrels can be spotted near the campus, anything spotted near the campus must be a rabbit or a squirrel."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 9,
+          "text": "Since all squirrels spotted near the campus are skittish, any squirrel spotted near the campus must be skittish."
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 471,
+      "example_id": 1363,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        2,
+        1
+      ],
+      "num_steps_shown": 13,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 10,
+      "sample_idx": 5,
+      "main_question": "Premises:\n\n\"Stranger Things\" is a popular Netflix show.\n\nIf a Netflix show is popular, Karen will binge-watch it.\n\nIf and only if Karen binge-watches a Netflix show, she will download it.\n\nKaren does not download \"Black Mirror.\"\n\n\"Black Mirror\" is a Netflix show.\n\nIf Karen binge-watches a Netflix show, she will share it with Lisa.\n\nConclusion:\nKaren will share \"Stranger Things\" with Lisa.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 7,
+      "target_step_text": "For any show, if it's a Netflix show and Karen binge-watches it, then she shares it with Lisa.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that \"Stranger Things\" is a Netflix show and it is popular."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 2,
+          "text": "I also know that if any Netflix show is popular, Karen will binge-watch it."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 3,
+          "text": "Additionally, if Karen binge-watches a Netflix show, she will share it with Lisa."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 4,
+          "text": "I want to show that Karen will share \"Stranger Things\" with Lisa."
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 184,
+      "example_id": 530,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        3
+      ],
+      "num_steps_shown": 7,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 11,
+      "sample_idx": 5,
+      "main_question": "Premises:\n\n\"Stranger Things\" is a popular Netflix show.\n\nIf a Netflix show is popular, Karen will binge-watch it.\n\nIf and only if Karen binge-watches a Netflix show, she will download it.\n\nKaren does not download \"Black Mirror.\"\n\n\"Black Mirror\" is a Netflix show.\n\nIf Karen binge-watches a Netflix show, she will share it with Lisa.\n\nConclusion:\nKaren will share \"Stranger Things\" with Lisa.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 13,
+      "target_step_text": "But since Karen binge-watches \"Stranger Things,\" she does share it with Lisa.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 2,
+          "text": "I also know that if any Netflix show is popular, Karen will binge-watch it."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 5,
+          "text": "So for any show, if it's a Netflix show and it's popular, then Karen binge-watches it."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 7,
+          "text": "For any show, if it's a Netflix show and Karen binge-watches it, then she shares it with Lisa."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 10,
+          "text": "Since \"Stranger Things\" is a Netflix show, if Karen binge-watches it, she will share it with Lisa."
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 184,
+      "example_id": 530,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        11,
+        10
+      ],
+      "num_steps_shown": 13,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 12,
+      "sample_idx": 7,
+      "main_question": "Premises:\n\nAll aliens are extraterrestrials.\n\nIf someone is from Mars, then they are an alien.\n\nNo extraterrestrials are human.\n\nAll highly intelligent beings from Earth are humans.\n\nMarvin is a highly intelligent being.\n\nMarvin is either from Earth and from Mars, or he is from neither.\n\nIf Marvin is not from Earth, then Marvin is an extraterrestrial.\n\nConclusion:\nMarvin is neither a human nor from Mars.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 14,
+      "target_step_text": "Since all highly intelligent beings from Earth are humans, any highly intelligent being who is from Earth must be human.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 3,
+          "text": "No extraterrestrials are human."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 4,
+          "text": "All highly intelligent beings from Earth are humans."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 8,
+          "text": "From the fact that anyone from Mars is an alien, I can say: if someone is from Mars, then they are an alien."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 10,
+          "text": "Since if Marvin is not from Earth then he is an extraterrestrial, it follows that Marvin is either from Earth or he is an extraterrestrial."
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 452,
+      "example_id": 1302,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        4
+      ],
+      "num_steps_shown": 14,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 13,
+      "sample_idx": 7,
+      "main_question": "Premises:\n\nAll aliens are extraterrestrials.\n\nIf someone is from Mars, then they are an alien.\n\nNo extraterrestrials are human.\n\nAll highly intelligent beings from Earth are humans.\n\nMarvin is a highly intelligent being.\n\nMarvin is either from Earth and from Mars, or he is from neither.\n\nIf Marvin is not from Earth, then Marvin is an extraterrestrial.\n\nConclusion:\nMarvin is neither a human nor from Mars.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 16,
+      "target_step_text": "From my assumption that the conclusion is false, Marvin is either human or from Mars.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 5,
+          "text": "Marvin is either both from Earth and from Mars, or he is from neither."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 7,
+          "text": "I want to show that Marvin is neither a human nor from Mars. Let me assume, for the sake of contradiction, that this is false—meaning Marvin is a human or Marvin is from Mars."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 10,
+          "text": "Since if Marvin is not from Earth then he is an extraterrestrial, it follows that Marvin is either from Earth or he is an extraterrestrial."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 12,
+          "text": "Combining the fact that anyone from Mars is an alien and any alien is an extraterrestrial, anyone from Mars must be an extraterrestrial."
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 452,
+      "example_id": 1302,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        7
+      ],
+      "num_steps_shown": 16,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 14,
+      "sample_idx": 7,
+      "main_question": "Premises:\n\nAll aliens are extraterrestrials.\n\nIf someone is from Mars, then they are an alien.\n\nNo extraterrestrials are human.\n\nAll highly intelligent beings from Earth are humans.\n\nMarvin is a highly intelligent being.\n\nMarvin is either from Earth and from Mars, or he is from neither.\n\nIf Marvin is not from Earth, then Marvin is an extraterrestrial.\n\nConclusion:\nMarvin is neither a human nor from Mars.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 17,
+      "target_step_text": "Since anyone from Mars is an extraterrestrial and no extraterrestrial is human, anyone from Mars is not human.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 6,
+          "text": "If Marvin is not from Earth, then Marvin is an extraterrestrial."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 9,
+          "text": "Since all aliens are extraterrestrials, anyone who is an alien must be an extraterrestrial."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 11,
+          "text": "Since no extraterrestrials are human, any extraterrestrial is not human."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 12,
+          "text": "Combining the fact that anyone from Mars is an alien and any alien is an extraterrestrial, anyone from Mars must be an extraterrestrial."
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 452,
+      "example_id": 1302,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        12,
+        3
+      ],
+      "num_steps_shown": 17,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 15,
+      "sample_idx": 8,
+      "main_question": "Premises:\n\nEveryone at the mixer is a Grand Slam champion or an Oscar-nominated actor.\n\nEvery Grand Slam champion at the mixer is a professional tennis player.\n\nAll Oscar-nominated actors at the mixer are celebrities.\n\nAll professional tennis players at the mixer are athletes.\n\nIf a person at the mixer is a celebrity, then they are well paid.\n\nIf a person at the mixer is an athlete, then they are famous.\n\nAll well-paid people at the mixer live in tax havens.\n\nDjokovic is at the mixer: if Djokovic is a famous athlete, then Djokovic is well-paid.\n\nConclusion:\nDjokovic lives in a tax haven.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 12,
+      "target_step_text": "For anyone at the mixer, that person is either a Grand Slam winner or an actor.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that everyone at the mixer is either a Grand Slam champion or an Oscar-nominated actor."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 4,
+          "text": "All professional tennis players at the mixer are athletes."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 6,
+          "text": "If someone at the mixer is an athlete, then they are famous."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 8,
+          "text": "Djokovic is at the mixer, and if Djokovic is both famous and an athlete, then Djokovic is well paid."
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 340,
+      "example_id": 894,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        1
+      ],
+      "num_steps_shown": 12,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 16,
+      "sample_idx": 8,
+      "main_question": "Premises:\n\nEveryone at the mixer is a Grand Slam champion or an Oscar-nominated actor.\n\nEvery Grand Slam champion at the mixer is a professional tennis player.\n\nAll Oscar-nominated actors at the mixer are celebrities.\n\nAll professional tennis players at the mixer are athletes.\n\nIf a person at the mixer is a celebrity, then they are well paid.\n\nIf a person at the mixer is an athlete, then they are famous.\n\nAll well-paid people at the mixer live in tax havens.\n\nDjokovic is at the mixer: if Djokovic is a famous athlete, then Djokovic is well-paid.\n\nConclusion:\nDjokovic lives in a tax haven.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 13,
+      "target_step_text": "For anyone at the mixer, that person is either a champion or Oscar-nominated.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that everyone at the mixer is either a Grand Slam champion or an Oscar-nominated actor."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 5,
+          "text": "If someone at the mixer is a celebrity, then they are well paid."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 7,
+          "text": "All well-paid people at the mixer live in tax havens."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 9,
+          "text": "I need to determine whether Djokovic lives in a tax haven."
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 340,
+      "example_id": 894,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        1
+      ],
+      "num_steps_shown": 13,
+      "is_attention_check": true
+    },
+    {
+      "question_number": 17,
+      "sample_idx": 8,
+      "main_question": "Premises:\n\nEveryone at the mixer is a Grand Slam champion or an Oscar-nominated actor.\n\nEvery Grand Slam champion at the mixer is a professional tennis player.\n\nAll Oscar-nominated actors at the mixer are celebrities.\n\nAll professional tennis players at the mixer are athletes.\n\nIf a person at the mixer is a celebrity, then they are well paid.\n\nIf a person at the mixer is an athlete, then they are famous.\n\nAll well-paid people at the mixer live in tax havens.\n\nDjokovic is at the mixer: if Djokovic is a famous athlete, then Djokovic is well-paid.\n\nConclusion:\nDjokovic lives in a tax haven.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 14,
+      "target_step_text": "For anyone at the mixer, that person is either a champion or an actor.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that everyone at the mixer is either a Grand Slam champion or an Oscar-nominated actor."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 6,
+          "text": "If someone at the mixer is an athlete, then they are famous."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 8,
+          "text": "Djokovic is at the mixer, and if Djokovic is both famous and an athlete, then Djokovic is well paid."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 10,
+          "text": "Djokovic is at the mixer."
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 340,
+      "example_id": 894,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        1
+      ],
+      "num_steps_shown": 14,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 18,
+      "sample_idx": 11,
+      "main_question": "Premises:\n\nIf someone is ranked highly by the Women's Tennis Association, then they are one of the most active players in major tennis.\n\nEveryone who lost to Iga Świątek at Roland Garros 2022 is ranked highly by the Women's Tennis Association.\n\nAll female tennis players at Roland Garros 2022 lost to Iga Świątek.\n\nAll tennis players at Roland Garros 2022 are either female or male.\n\nAll male tennis players at Roland Garros in 2022 lost to Rafael Nadal.\n\nIf Coco Gauff is ranked highly by the Women's Tennis Association or lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.\n\nCoco Gauff is at Roland Garros 2022.\n\nConclusion:\nCoco Gauff is among the most active Grand-Slam players.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 11,
+      "target_step_text": "Any tennis player at Roland Garros 2022 must be either female or male.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that if someone is ranked highly by the Women's Tennis Association, then they are one of the most active players in major tennis."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 3,
+          "text": "All female tennis players at Roland Garros 2022 lost to Iga Świątek."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 4,
+          "text": "Every tennis player at Roland Garros 2022 is either female or male."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 7,
+          "text": "Coco Gauff is a tennis player at Roland Garros 2022."
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 385,
+      "example_id": 1029,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        4
+      ],
+      "num_steps_shown": 11,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 19,
+      "sample_idx": 11,
+      "main_question": "Premises:\n\nIf someone is ranked highly by the Women's Tennis Association, then they are one of the most active players in major tennis.\n\nEveryone who lost to Iga Świątek at Roland Garros 2022 is ranked highly by the Women's Tennis Association.\n\nAll female tennis players at Roland Garros 2022 lost to Iga Świątek.\n\nAll tennis players at Roland Garros 2022 are either female or male.\n\nAll male tennis players at Roland Garros in 2022 lost to Rafael Nadal.\n\nIf Coco Gauff is ranked highly by the Women's Tennis Association or lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.\n\nCoco Gauff is at Roland Garros 2022.\n\nConclusion:\nCoco Gauff is among the most active Grand-Slam players.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 14,
+      "target_step_text": "Any male tennis player at Roland Garros 2022 lost to Rafael Nadal.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 3,
+          "text": "All female tennis players at Roland Garros 2022 lost to Iga Świątek."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 5,
+          "text": "All male tennis players at Roland Garros 2022 lost to Rafael Nadal."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 8,
+          "text": "The conclusion I want to verify is that Coco Gauff is among the most active Grand-Slam players."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 10,
+          "text": "And anyone ranked highly by the Women's Tennis Association is one of the most active players in major tennis."
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 385,
+      "example_id": 1029,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        5
+      ],
+      "num_steps_shown": 14,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 20,
+      "sample_idx": 11,
+      "main_question": "Premises:\n\nIf someone is ranked highly by the Women's Tennis Association, then they are one of the most active players in major tennis.\n\nEveryone who lost to Iga Świątek at Roland Garros 2022 is ranked highly by the Women's Tennis Association.\n\nAll female tennis players at Roland Garros 2022 lost to Iga Świątek.\n\nAll tennis players at Roland Garros 2022 are either female or male.\n\nAll male tennis players at Roland Garros in 2022 lost to Rafael Nadal.\n\nIf Coco Gauff is ranked highly by the Women's Tennis Association or lost to Rafael Nadal, then Coco Gauff is not a male tennis player at Roland Garros 2022.\n\nCoco Gauff is at Roland Garros 2022.\n\nConclusion:\nCoco Gauff is among the most active Grand-Slam players.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 17,
+      "target_step_text": "Now, suppose for the sake of contradiction that Coco Gauff is not among the most active players in major tennis.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 6,
+          "text": "If Coco Gauff is ranked highly by the Women's Tennis Association or lost to Rafael Nadal, then she is not a male tennis player at Roland Garros 2022."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 8,
+          "text": "The conclusion I want to verify is that Coco Gauff is among the most active Grand-Slam players."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 11,
+          "text": "Any tennis player at Roland Garros 2022 must be either female or male."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 13,
+          "text": "Combining the fact that every tennis player at Roland Garros 2022 is female or male with the fact that female tennis players there lost to Iga Świątek, any tennis player at Roland Garros 2022 either lost to Iga Świątek or is male."
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 385,
+      "example_id": 1029,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        8
+      ],
+      "num_steps_shown": 17,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 21,
+      "sample_idx": 12,
+      "main_question": "Premises:\n\nAll Romance languages are Indo-European languages.\n\nRomance languages are a language family.\n\nAll languages within a language family are related to each other.\n\nFrench and Spanish are both Romance languages.\n\nGerman is related to Spanish.\n\nBasque is not related to any other language.\n\nConclusion:\nBasque is a Romance language.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 7,
+      "target_step_text": "Since Basque is not related to any language, if something is a language then Basque is not related to it.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that all Romance languages are members of a language family."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 2,
+          "text": "I also know that any two languages that are members of the same language family are related to each other (in both directions) and are indeed languages."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 3,
+          "text": "Basque is not related to any other language — that is, for any language, Basque is not related to it."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 4,
+          "text": "Suppose, for the sake of contradiction, that Basque is a Romance language."
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 213,
+      "example_id": 608,
+      "gold_label": "False",
+      "dag_direct_parent_steps": [
+        3
+      ],
+      "num_steps_shown": 7,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 22,
+      "sample_idx": 12,
+      "main_question": "Premises:\n\nAll Romance languages are Indo-European languages.\n\nRomance languages are a language family.\n\nAll languages within a language family are related to each other.\n\nFrench and Spanish are both Romance languages.\n\nGerman is related to Spanish.\n\nBasque is not related to any other language.\n\nConclusion:\nBasque is a Romance language.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 12,
+      "target_step_text": "Now, if any two things share a family, and Basque is also a member of some family along with one of them, then we get a contradiction — because Basque would have to be related to that thing, yet Basque is not related to anything.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that all Romance languages are members of a language family."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 4,
+          "text": "Suppose, for the sake of contradiction, that Basque is a Romance language."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 6,
+          "text": "Under my assumption, Basque is a Romance language."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 9,
+          "text": "Combining the fact that Basque is not related to any language with the membership relation: if something is a member of some family and anything else is also a member of that family, then Basque cannot be related to it — so those memberships together with Basque's non-relatedness create a conflict."
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 213,
+      "example_id": 608,
+      "gold_label": "False",
+      "dag_direct_parent_steps": [
+        9,
+        2
+      ],
+      "num_steps_shown": 12,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 23,
+      "sample_idx": 12,
+      "main_question": "Premises:\n\nAll Romance languages are Indo-European languages.\n\nRomance languages are a language family.\n\nAll languages within a language family are related to each other.\n\nFrench and Spanish are both Romance languages.\n\nGerman is related to Spanish.\n\nBasque is not related to any other language.\n\nConclusion:\nBasque is a Romance language.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 13,
+      "target_step_text": "That is a contradiction. So Basque cannot be a Romance language, and the conclusion is false.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 2,
+          "text": "I also know that any two languages that are members of the same language family are related to each other (in both directions) and are indeed languages."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 5,
+          "text": "Since every Romance language is a member of a language family, any Romance language belongs to that family."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 7,
+          "text": "Since Basque is not related to any language, if something is a language then Basque is not related to it."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 11,
+          "text": "Since Basque is a Romance language, Basque is a member of the language family."
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 213,
+      "example_id": 608,
+      "gold_label": "False",
+      "dag_direct_parent_steps": [
+        12,
+        11
+      ],
+      "num_steps_shown": 13,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 24,
+      "sample_idx": 15,
+      "main_question": "Premises:\n\nIn superhero movies, the good guys always win.\n\nThe Surprising Adventures of Sir Digby Chicken Caesar is a superhero movie.\n\nGood guys fight bad guys and vice versa.\n\nSir Digby fights his nemesis.\n\nIf a superhero movie is named after a character, that character is a good guy.\n\nThe Surprising Adventures of Sir Digby Chicken Caesar is named after Sir Digby.\n\nIf somebody wins a fight, the person they are fighting does not win.\n\nIf a superhero movie is named after a character, that character is in the movie.\n\nConclusion:\nSir Digby’s nemesis does not win.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 14,
+      "target_step_text": "Combining the facts that being named after implies being a good guy and being in the movie, anyone the movie is named after must win.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 3,
+          "text": "Additionally, if someone wins a fight, then the person they are fighting does not win."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 6,
+          "text": "The Surprising Adventures of Sir Digby Chicken Caesar is a superhero movie."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 8,
+          "text": "Similarly, for any superhero movie, if it is named after a character, that character is a good guy."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 10,
+          "text": "Since The Surprising Adventures of Sir Digby Chicken Caesar is a superhero movie, any good guy who is in it must win."
+        }
+      ],
+      "correct_answers": [
+        "D"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 245,
+      "example_id": 688,
+      "gold_label": "True",
+      "dag_direct_parent_steps": [
+        11,
+        10
+      ],
+      "num_steps_shown": 14,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 25,
+      "sample_idx": 17,
+      "main_question": "Premises:\n\nAll business organizations are legal entities.\n\nAll companies are business organizations.\n\nAll private companies are companies.\n\nAll legal entities are created under law.\n\nAll legal entities have legal obligations.\n\nIf the Harvard Weekly Book Club is created under law, then it is not a private company.\n\nConclusion:\nThe Harvard Weekly Book club has legal obligations and is a private company.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 10,
+      "target_step_text": "Since all private companies are companies, any private company must be a company.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that all business organizations are legal entities."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 2,
+          "text": "I also know that all companies are business organizations."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 3,
+          "text": "And all private companies are companies."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 6,
+          "text": "I want to show that the conclusion — the Harvard Weekly Book Club has legal obligations and is a private company — is false. So let me assume, for the sake of contradiction, that this conclusion holds."
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 352,
+      "example_id": 934,
+      "gold_label": "False",
+      "dag_direct_parent_steps": [
+        3
+      ],
+      "num_steps_shown": 10,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 26,
+      "sample_idx": 17,
+      "main_question": "Premises:\n\nAll business organizations are legal entities.\n\nAll companies are business organizations.\n\nAll private companies are companies.\n\nAll legal entities are created under law.\n\nAll legal entities have legal obligations.\n\nIf the Harvard Weekly Book Club is created under law, then it is not a private company.\n\nConclusion:\nThe Harvard Weekly Book club has legal obligations and is a private company.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 11,
+      "target_step_text": "Now, if the Harvard Weekly Book Club is created under law, then it is not a private company.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 1,
+          "text": "I know that all business organizations are legal entities."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 3,
+          "text": "And all private companies are companies."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 5,
+          "text": "I also have that if the Harvard Weekly Book Club is created under law, then it is not a private company."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 7,
+          "text": "Since all companies are business organizations, anything that is a company must be a business organization."
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 352,
+      "example_id": 934,
+      "gold_label": "False",
+      "dag_direct_parent_steps": [
+        5
+      ],
+      "num_steps_shown": 11,
+      "is_attention_check": true
+    },
+    {
+      "question_number": 27,
+      "sample_idx": 17,
+      "main_question": "Premises:\n\nAll business organizations are legal entities.\n\nAll companies are business organizations.\n\nAll private companies are companies.\n\nAll legal entities are created under law.\n\nAll legal entities have legal obligations.\n\nIf the Harvard Weekly Book Club is created under law, then it is not a private company.\n\nConclusion:\nThe Harvard Weekly Book club has legal obligations and is a private company.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 13,
+      "target_step_text": "Since all legal entities are created under law, any legal entity must be created under law.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 2,
+          "text": "I also know that all companies are business organizations."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 4,
+          "text": "Furthermore, all legal entities are created under law."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 7,
+          "text": "Since all companies are business organizations, anything that is a company must be a business organization."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 9,
+          "text": "From my assumption that the conclusion holds, the Harvard Weekly Book Club is a private company."
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 352,
+      "example_id": 934,
+      "gold_label": "False",
+      "dag_direct_parent_steps": [
+        4
+      ],
+      "num_steps_shown": 13,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 28,
+      "sample_idx": 17,
+      "main_question": "Premises:\n\nAll business organizations are legal entities.\n\nAll companies are business organizations.\n\nAll private companies are companies.\n\nAll legal entities are created under law.\n\nAll legal entities have legal obligations.\n\nIf the Harvard Weekly Book Club is created under law, then it is not a private company.\n\nConclusion:\nThe Harvard Weekly Book club has legal obligations and is a private company.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 15,
+      "target_step_text": "Since the Harvard Weekly Book Club is a private company, it is a company.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 4,
+          "text": "Furthermore, all legal entities are created under law."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 7,
+          "text": "Since all companies are business organizations, anything that is a company must be a business organization."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 9,
+          "text": "From my assumption that the conclusion holds, the Harvard Weekly Book Club is a private company."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 11,
+          "text": "Now, if the Harvard Weekly Book Club is created under law, then it is not a private company."
+        }
+      ],
+      "correct_answers": [
+        "C"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 352,
+      "example_id": 934,
+      "gold_label": "False",
+      "dag_direct_parent_steps": [
+        9,
+        3
+      ],
+      "num_steps_shown": 15,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 29,
+      "sample_idx": 19,
+      "main_question": "Premises:\n\nPeople who are born in a multiple birth with siblings spend a lot of time hanging out with and playing with their siblings.\n\nIf people have siblings who were born together, then they were born in a multiple birth.\n\nIf people complain often about annoying siblings, then they have siblings who were born together.\n\nIf people live at home, then they do not live with strangers.\n\nIf people spend a lot of time hanging out with and playing with their siblings, then they often live at home.\n\nLuke either is a baby born in a multiple birth and live with strangers, or is not a baby born in a multiple birth and does not live with strangers\n\nConclusion:\nLuke complains often about annoying siblings.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 13,
+      "target_step_text": "Also, if someone complains often about annoying siblings, then their sibling f1 was born together with them.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 2,
+          "text": "I also know that if people have siblings who were born together, then they were born in a multiple birth."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 3,
+          "text": "If people complain often about annoying siblings, then they have siblings who were born together."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 7,
+          "text": "Suppose, for the sake of contradiction, that Luke does not complain often about annoying siblings."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 9,
+          "text": "From the rule about multiple births, anyone born in a multiple birth spends a lot of time playing with their siblings."
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 379,
+      "example_id": 1012,
+      "gold_label": "False",
+      "dag_direct_parent_steps": [
+        3
+      ],
+      "num_steps_shown": 13,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 30,
+      "sample_idx": 19,
+      "main_question": "Premises:\n\nPeople who are born in a multiple birth with siblings spend a lot of time hanging out with and playing with their siblings.\n\nIf people have siblings who were born together, then they were born in a multiple birth.\n\nIf people complain often about annoying siblings, then they have siblings who were born together.\n\nIf people live at home, then they do not live with strangers.\n\nIf people spend a lot of time hanging out with and playing with their siblings, then they often live at home.\n\nLuke either is a baby born in a multiple birth and live with strangers, or is not a baby born in a multiple birth and does not live with strangers\n\nConclusion:\nLuke complains often about annoying siblings.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 14,
+      "target_step_text": "If someone spends a lot of time playing with their siblings, then that person lives at home.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 3,
+          "text": "If people complain often about annoying siblings, then they have siblings who were born together."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 5,
+          "text": "If people spend a lot of time hanging out with and playing with their siblings, then they often live at home."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 8,
+          "text": "From the rule about siblings born together, if someone has a sibling who was born together, then that person was born in a multiple birth."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 10,
+          "text": "Looking at Luke's situation, either Luke lives with strangers or Luke was not born in a multiple birth."
+        }
+      ],
+      "correct_answers": [
+        "B"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 379,
+      "example_id": 1012,
+      "gold_label": "False",
+      "dag_direct_parent_steps": [
+        5
+      ],
+      "num_steps_shown": 14,
+      "is_attention_check": false
+    },
+    {
+      "question_number": 31,
+      "sample_idx": 19,
+      "main_question": "Premises:\n\nPeople who are born in a multiple birth with siblings spend a lot of time hanging out with and playing with their siblings.\n\nIf people have siblings who were born together, then they were born in a multiple birth.\n\nIf people complain often about annoying siblings, then they have siblings who were born together.\n\nIf people live at home, then they do not live with strangers.\n\nIf people spend a lot of time hanging out with and playing with their siblings, then they often live at home.\n\nLuke either is a baby born in a multiple birth and live with strangers, or is not a baby born in a multiple birth and does not live with strangers\n\nConclusion:\nLuke complains often about annoying siblings.\n\nDetermine whether the conclusion is entailed by the premises.",
+      "target_step_index": 15,
+      "target_step_text": "If someone lives at home, then that person does not live with strangers.",
+      "counterfactual_starting_text": "",
+      "choices": [
+        {
+          "choice_letter": "A",
+          "step_index": 4,
+          "text": "If people live at home, then they do not live with strangers."
+        },
+        {
+          "choice_letter": "B",
+          "step_index": 7,
+          "text": "Suppose, for the sake of contradiction, that Luke does not complain often about annoying siblings."
+        },
+        {
+          "choice_letter": "C",
+          "step_index": 9,
+          "text": "From the rule about multiple births, anyone born in a multiple birth spends a lot of time playing with their siblings."
+        },
+        {
+          "choice_letter": "D",
+          "step_index": 11,
+          "text": "Since I'm assuming the opposite of my assumption, Luke complains often about annoying siblings."
+        }
+      ],
+      "correct_answers": [
+        "A"
+      ],
+      "model_name": "control/anthropic/claude-opus-4.6",
+      "story_id": 379,
+      "example_id": 1012,
+      "gold_label": "False",
+      "dag_direct_parent_steps": [
+        4
+      ],
+      "num_steps_shown": 15,
+      "is_attention_check": false
+    }
+  ]
+}
